@@ -1,0 +1,107 @@
+/*
+/////////////////////////////////////////////////////////
+///////////////////// GLOBAL CSS ////////////////////////
+/////////////////////////////////////////////////////////
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1, 3;
+  font-family: "Raleway", sans-serif;
+}
+
+/*
+///////////////////// LES FONTES ////////////////////////
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(120, 111, 111);
+}
+
+/*
+///////////////////// < ul > //////////////////////////////
+*/
+
+ul,
+li {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+///////////////////// < a > //////////////////////////////
+*/
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  color: rgb(136, 0, 255);
+}
+
+/*
+/////////////////////////////////////////////////////////
+///////////////////// MES CLASSES ////////////////////////
+/////////////////////////////////////////////////////////
+*/
+
+/* Rappel d'une classe */
+.lePointClaClasse {
+  color: rgb(116, 97, 134);
+}
+
+/* Trait de séparation */
+hr {
+  border: 1px solid currentColor;
+}
+
+/* Titres personnalisés */
+.mesTitrages {
+  font-size: 25px;
+  color: black;
+}
+
+/* Tailles de polices personnalisées */
+.font-taille-400 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.font-taille-700-22 {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.font-taille-700-16 {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+i {
+  font-weight: 700;
+  font-size: 20px;
+}
