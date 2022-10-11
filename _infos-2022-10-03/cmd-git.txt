@@ -4,7 +4,11 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
-Dernière version : MARDI 09 AOUT 2022
+Dernière version : MARDI 11 OCTOBRE 2022
+INFOS :
+Cééer un NEW REPOSITORY sur GitHub point c)
+
+-------------------------------------------------------------------
 INFOS :
 Ajout de nouvelles commandes git, non évoquées chez Doranco.
 - Fusion des branches.
@@ -15,9 +19,7 @@ Ajout de nouvelles commandes git, non évoquées chez Doranco.
 °°° GESTION DES ERREURS °°°
 - Modifier le nom du dernier commit effectué.
 
--------------------------------------------------------------------
-
-Précédente version : JEUDI 31 MARS 2022
+Précédente version : MARDI 09 AOUT 2022
 INFOS :
 Les fichiers CDM-Git dans le tableau de la fin
 et sans les modifications du mot : dépôt. Ne sont pas les derniers.
@@ -52,7 +54,8 @@ LISTE DES COMMANDES GIT détaillées :
 
         CONNECTER SON DÉPÔT LOCAL au DÉPÔT DISTANT  (GitHub)
         a) Aller suu GitHub
-        b)Créer un "New Repositoy" et lui donner un nom.
+        b) Créer un "New Repositoy" et lui donner un nom.
+        c) Suivre les instructions sur GITHUB pour éffectier notre premier commit.
         
 ----------------------------------------------------------------------------------------------
 °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°

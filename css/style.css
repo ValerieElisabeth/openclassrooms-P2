@@ -12,12 +12,16 @@
 
 html {
   font-size: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box; /* facilite et simplifie la gestion de la taille des éléments d'un navigateur à l'autre */
+  max-width: 1400px; /* Largeur max du site */
+  margin: auto; /* A pour effet de centrer le site dans la page du navigateur */
+  border: solid 2px red; /* TEST */
 }
 
 body {
   margin: 0;
   padding: 0;
+
   line-height: 1, 3;
   font-family: "Raleway", sans-serif;
 }
@@ -65,7 +69,7 @@ a {
 
 /*
 /////////////////////////////////////////////////////////
-///////////////////// MES CLASSES ////////////////////////
+/////////////// MES CLASSES DE BASE /////////////////////
 /////////////////////////////////////////////////////////
 */
 
@@ -104,4 +108,17 @@ hr {
 i {
   font-weight: 700;
   font-size: 20px;
+}
+
+/*
+/////////////////////////////////////////////////////////
+////////////////////// FLEXBOX //////////////////////////
+/////////////////////////////////////////////////////////
+*/
+
+.container {
+  max-width: 95%;
+  margin: 20px auto;
+  border: solid 2px red; /* TEST */
+
 }
