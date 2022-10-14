@@ -15,15 +15,28 @@ html {
   box-sizing: border-box; /* facilite et simplifie la gestion de la taille des éléments d'un navigateur à l'autre */
   max-width: 1400px; /* Largeur max du site */
   margin: auto; /* A pour effet de centrer le site dans la page du navigateur */
-  border: solid 2px red; /* TEST */
+  /* TEST */
+  border: solid 2px rgb(17, 255, 0);
 }
 
 body {
   margin: 0;
   padding: 0;
-
-  line-height: 1, 3;
   font-family: "Raleway", sans-serif;
+}
+
+/*
+/////////////////////////////////////////////////////////
+/////////////////////// COLORS //////////////////////////
+/////////////////////////////////////////////////////////
+*/
+
+:root {
+  --color-01: black;
+  --color-02: white;
+  --color-03: rgb(0, 101, 252);
+  --color-04: rgb(222, 235, 255);
+  --color-05: rgb(217, 217, 217);
 }
 
 /*
@@ -35,12 +48,15 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  color: rgb(120, 111, 111);
+h6,
+p {
+  color: var(--color-01);
+  margin: 0;
+  padding: 0;
 }
 
 /*
-///////////////////// < ul > //////////////////////////////
+///////////////////// < ul > /////////////////////////////
 */
 
 ul,
@@ -64,18 +80,18 @@ a:hover {
 a {
   margin: 0;
   padding: 0;
-  color: rgb(136, 0, 255);
+  color: rgb(0, 204, 255);
 }
 
 /*
 /////////////////////////////////////////////////////////
-/////////////// MES CLASSES DE BASE /////////////////////
-/////////////////////////////////////////////////////////
+//////////////// CLASSES DE DÉMARRAGE ///////////////////
+///////////////////// (à jeter) /////////////////////////
 */
 
 /* Rappel d'une classe */
 .lePointClaClasse {
-  color: rgb(116, 97, 134);
+  color: var(--color-03);
 }
 
 /* Trait de séparation */
@@ -112,13 +128,294 @@ i {
 
 /*
 /////////////////////////////////////////////////////////
-////////////////////// FLEXBOX //////////////////////////
+////////////////////// CONTAINERS ///////////////////////
 /////////////////////////////////////////////////////////
 */
 
-.container {
+.container-01 {
+  max-width: 95%;
+  margin: 0 auto 0;
+  /* TEST */
+  border: solid 2px red;
+}
+
+.container-02 {
   max-width: 95%;
   margin: 20px auto;
-  border: solid 2px red; /* TEST */
+  /* TEST */
+  border: solid 2px rgb(0, 68, 255);
+}
 
+.container-03 {
+  margin: 50px auto;
+  /* TEST */
+  border: solid 2px rgb(255, 204, 0);
+}
+
+/*
+/////////////////////////////////////////////////////////
+////////////////////://// FLEXBOX ///////////////////////
+/////////////////////////////////////////////////////////
+*/
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-fd-c {
+  display: flex;
+  flex-direction: column;
+}
+
+.d-flex-fd-c-sb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.d-flex-fd-r {
+  display: flex;
+  flex-direction: row;
+}
+
+.d-flex-jc-c {
+  display: flex;
+  justify-content: center;
+}
+
+.d-flex-jc-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.d-flex-jc-fe {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.d-flex-jc-fs {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.d-flex-jc-sa {
+  display: flex;
+  justify-content: space-around;
+}
+
+.d-flex-fw {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*
+/////////////////////////////////////////////////////////
+///////////////////////// HEADER ////////////////////////
+/////////////////////////////////////////////////////////
+*/
+.logo {
+  height: 19px;
+  width: 61px;
+  margin-top: 44px;
+  margin-left: 55px;
+  /* TEST */
+  border: solid 1px rgb(255, 85, 0);
+}
+
+nav {
+  width: 381px;
+  height: 40 px;
+  left: 982px;
+  top: 48px;
+  /* TEST */
+  border: solid 1px rgb(0, 174, 255);
+}
+
+nav > ul > li {
+  width: 300px;
+  height: 30px;
+  /* TEST */
+  border: solid 1px rgb(255, 238, 0);
+}
+/*
+/////////////////////////////////////////////////////////
+////////// MAIN //////// ÉLÉMENTS SIMILAIRES ////////////
+/////////////////////////////////////////////////////////
+*/
+
+/* ------ Les étoiles ------------------------------- */
+
+#blue-star {
+  color: var(--color-03);
+  /* Font */
+  font-size: 14px;
+}
+
+#grey-star {
+  color: var(--color-04);
+  /* Font */
+  font-size: 14px;
+  /* TEST */
+}
+
+/* ------ <h3> / <p> / <strong> des cartes ----------- */
+
+.card-title {
+  /* Font */
+  font-weight: 700;
+  font-size: 16px;
+}
+.card-p {
+  /* Font */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  padding-top: 5px;
+  padding-bottom: 7px;
+}
+
+.card-p > strong {
+  font-size: 14px;
+  font-weight: 600;
+  /* color: violet; */
+}
+
+/* ------ Ombre des cartes ---------------------------- */
+
+.b-shadow {
+  box-shadow: 2px 2px 20px var(--color-05);
+}
+
+/*
+/////////////////////////////////////////////////////////
+////////// MAIN //// Hébergement à Marseille ////////////
+/////////////////////////////////////////////////////////
+*/
+
+/* section : background hébergement à Marseille */
+
+#main-apartment {
+  background-color: var(--color-04);
+  height: 626px;
+  width: 880px;
+  border-radius: 20px;
+}
+
+/* carte des hébergements */
+
+.card-apartment {
+  width: 246px;
+  height: 199px;
+  border-radius: 20px;
+  border: solid 1px rgb(161, 87, 165);
+  display: flex;
+  flex-direction: column;
+
+  /* TEST */
+  background-color: var(--color-02);
+}
+
+.card-apartment > div {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  /* TEST */
+  /* border: solid 1px rgb(165, 130, 87); */
+}
+
+/* carte des hébergements */
+
+.img-apartment {
+  width: 246px;
+  height: 124px;
+  object-fit: cover;
+
+  /* White */
+  border: 5px solid var(--color-02);
+  border-radius: 20px 20px 0px 0px;
+}
+
+/*
+/////////////////////////////////////////////////////////
+/////// MAIN / ASIDE /// Les plus polulaires ////////////
+/////////////////////////////////////////////////////////
+*/
+
+/* aside : background Les plus populaires */
+#main-aside {
+  background-color: var(--color-05);
+  height: 625px;
+  width: 420px;
+  border-radius: 20px;
+}
+
+/* carte aside : les plus populaires */
+
+.card-aside {
+  height: 144px;
+  width: 343px;
+  border-radius: 20px;
+  background-color: var(--color-02);
+  /* TEST */
+  /* border: solid 3px rgb(0, 145, 255); */
+}
+
+.img-aside {
+  height: 144px;
+  width: 137px;
+  /* White */
+  border-radius: 20px 0px 0px 20px;
+  object-fit: cover;
+  /* TEST */
+  border: 5px solid var(--color-02);
+}
+.card-aside > div {
+  padding-top: 16px;
+  padding-bottom: 12px;
+
+  /* TEST */
+  /* border: solid 3px rgb(255, 234, 0); */
+}
+/*
+/////////////////////////////////////////////////////////
+/////// MAIN //// Activités à Marseille /////////////////
+/////////////////////////////////////////////////////////
+*/
+
+#main-activity {
+  /* TEST */
+  border: solid 2px rgb(255, 47, 0);
+}
+
+/* carte : activités */
+
+.card-activity {
+  width: 302px;
+  height: 445px;
+  border-radius: 20px;
+}
+
+.img-activity {
+  width: 302px;
+  height: 445px;
+  /* White */
+  border: 5px solid var(--color-02);
+  border-radius: 20px;
+  object-fit: cover;
+  /* TEST */
+  /* border: solid 3px rgb(255, 234, 0); */
+}
+
+.card-activity > div {
+  height: 56px;
+  width: 302px;
+  margin-left: 19px;
+  /* TEST *
+  /* border: solid 3px rgb(255, 234, 0); */
+}
+
+.portrait-img {
+  height: 396px;
 }
