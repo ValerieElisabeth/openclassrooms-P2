@@ -85,49 +85,6 @@ a {
 
 /*
 /////////////////////////////////////////////////////////
-//////////////// CLASSES DE DÉMARRAGE ///////////////////
-///////////////////// (à jeter) /////////////////////////
-*/
-
-/* Rappel d'une classe */
-.lePointClaClasse {
-  color: var(--color-03);
-}
-
-/* Trait de séparation */
-hr {
-  border: 1px solid currentColor;
-}
-
-/* Titres personnalisés */
-.mesTitrages {
-  font-size: 25px;
-  color: black;
-}
-
-/* Tailles de polices personnalisées */
-.font-taille-400 {
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.font-taille-700-22 {
-  font-weight: 700;
-  font-size: 22px;
-}
-
-.font-taille-700-16 {
-  font-weight: 700;
-  font-size: 16px;
-}
-
-i {
-  font-weight: 700;
-  font-size: 20px;
-}
-
-/*
-/////////////////////////////////////////////////////////
 ////////////////////// CONTAINERS ///////////////////////
 /////////////////////////////////////////////////////////
 */
@@ -147,9 +104,16 @@ i {
 }
 
 .container-03 {
-  margin: 50px auto;
+  margin: 60px auto 0px auto;
   /* TEST */
-  border: solid 2px rgb(255, 204, 0);
+  /* border: solid 2px rgb(64, 255, 0);
+  background-color: rgb(255, 204, 0); */
+}
+
+.container-04 {
+  margin: 20px auto;
+  /* TEST */
+  /* border: solid 2px rgb(0, 255, 17); */
 }
 
 /*
@@ -183,6 +147,16 @@ i {
   justify-content: center;
 }
 
+.d-flex-ai-c {
+  display: flex;
+  align-items: center;
+}
+.d-flex-ai-jc-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .d-flex-jc-sb {
   display: flex;
   justify-content: space-between;
@@ -208,42 +182,166 @@ i {
   flex-wrap: wrap;
 }
 
+.d-flex-ai-b-jc-sb {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
 /*
 /////////////////////////////////////////////////////////
 ///////////////////////// HEADER ////////////////////////
 /////////////////////////////////////////////////////////
 */
-.logo {
+
+/* ---------------------------------------------------- */
+/* ------ Section logo & nav -------------------------- */
+/* ---------------------------------------------------- */
+
+.section-logo-nav > img {
   height: 19px;
   width: 61px;
-  margin-top: 44px;
-  margin-left: 55px;
-  /* TEST */
-  border: solid 1px rgb(255, 85, 0);
 }
 
-nav {
-  width: 381px;
-  height: 40 px;
-  left: 982px;
-  top: 48px;
-  /* TEST */
-  border: solid 1px rgb(0, 174, 255);
+.section-logo-nav > nav {
+  font-size: 16px;
 }
 
 nav > ul > li {
-  width: 300px;
-  height: 30px;
-  /* TEST */
-  border: solid 1px rgb(255, 238, 0);
+  width: 162px;
+  padding-top: 35px;
 }
+
+.right {
+  border-top: solid 2px;
+  color: var(--color-03);
+}
+
+.left {
+  border-top: solid 2px transparent;
+}
+
+/* ---------------------------------------------------- */
+/* ------ Section Titre & baseline -------------------- */
+/* ---------------------------------------------------- */
+
+.section-title > h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.section-title > p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+/* ---------------------------------------------------- */
+/* ------ Section rechercher -------------------------- */
+/* ---------------------------------------------------- */
+
+form {
+  font-size: 0px; /* permet de supprimer l'espace avant et après l'input */
+}
+
+form > i {
+  width: 50px;
+  height: 49px;
+  padding: 14px 18px 15px 18px;
+  border-radius: 15px 0px 0px 15px;
+  background-color: var(--color-05);
+  /* Font */
+  font-size: 20px;
+  /* TEST */
+  /* border: solid red; */
+}
+
+input {
+  width: 230px;
+  height: 49px;
+  padding-left: 16px;
+  border: solid 1px var(--color-05);
+  /* Font */
+  font-size: 18px;
+  font-weight: 700;
+}
+
+input::placeholder {
+  opacity: 1;
+}
+
+button {
+  width: 132px;
+  height: 49px;
+  border-radius: 0px 15px 15px 0px;
+  color: var(--color-02);
+  background-color: var(--color-03);
+  border-style: none;
+  /* Font */
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------- */
+/* ------ Section : Filter ---------------------------- */
+/* ---------------------------------------------------- */
+
+.filters * {
+  /* Font */
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.filters > ul {
+  height: 50px;
+  border-radius: 25px;
+  margin-left: 40px;
+  margin-right: 10px;
+  border: solid 2px var(--color-05);
+}
+
+/* Les icônes */
+.filters > ul > i {
+  margin-left: 20px;
+  margin-right: 10px;
+  color: var(--color-03);
+  /* Font */
+  font-size: 22px;
+}
+
+/* Marges autour des textes */
+.filters > ul > li {
+  margin-right: 20px;
+}
+
+.filters-bg-color {
+  background-color: var(--color-04);
+}
+
+/* ---------------------------------------------------- */
+/* ------ Section : i : information ------------------- */
+/* ---------------------------------------------------- */
+
+.section-info > div {
+  font-size: 12px;
+  height: 24px;
+  width: 24px;
+  border-radius: 50px;
+  color: var(--color-03);
+  border: solid 1px var(--color-05);
+}
+
+.section-info > p {
+  margin-left: 10px;
+}
+
 /*
 /////////////////////////////////////////////////////////
 ////////// MAIN //////// ÉLÉMENTS SIMILAIRES ////////////
 /////////////////////////////////////////////////////////
 */
 
-/* ------ Les étoiles ------------------------------- */
+/* ------ Les étoiles --------------------------------- */
 
 #blue-star {
   color: var(--color-03);
@@ -255,10 +353,9 @@ nav > ul > li {
   color: var(--color-04);
   /* Font */
   font-size: 14px;
-  /* TEST */
 }
 
-/* ------ <h3> / <p> / <strong> des cartes ----------- */
+/* ------ <h3> / <p> / <strong> des cartes ------------------ */
 
 .card-title {
   /* Font */
