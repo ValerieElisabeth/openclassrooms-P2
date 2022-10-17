@@ -244,10 +244,9 @@ form {
   font-size: 0px; /* permet de supprimer l'espace avant et après l'input */
 }
 
-form > i {
+form > div {
   width: 50px;
   height: 49px;
-  padding: 14px 18px 15px 18px;
   border-radius: 15px 0px 0px 15px;
   background-color: var(--color-05);
   /* Font */
