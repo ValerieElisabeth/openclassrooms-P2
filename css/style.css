@@ -278,7 +278,12 @@ button {
   border-style: none;
   /* Font */
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
+}
+.search-icon-mobile {
+  width: 49px;
+  height: 49px;
+  display: none;
 }
 
 /* ---------------------------------------------------- */
@@ -333,6 +338,54 @@ button {
 .section-info > p {
   margin-left: 10px;
 }
+
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+
+/*
+VERSION TABLETTE :
+Sur tous types d'écran quand la largeur de la fenêtre
+est comprise entre : 768px et 992px.
+*/
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+  /* ---------------------------------------------------- */
+  /* ------ Section logo & nav -------------------------- */
+  /* ---------------------------------------------------- */
+
+  .right {
+    border-top: solid 2px transparent;
+    color: var(--color-01);
+  }
+
+  /* ---------------------------------------------------- */
+  /* ------ Section : Filter ---------------------------- */
+  /* ---------------------------------------------------- */
+
+  .filters > ul {
+    height: 50px;
+    margin-left: 15px;
+  }
+
+  .filters-bg-color {
+    background-color: transparent;
+  }
+} /* fin @media queries tablette */
+
+/* ---------------------------------------------------- */
+
+/*
+VERSION MOBILE :
+Si l'écran plus petit ou égal à : 768px.
+*/
+@media screen and (max-width: 768px) {
+  header {
+    background-color: rgb(249, 238, 222);
+  }
+} /* fin @media queries mobile */
+/* ---------------------------------------------------- */
 
 /*
 /////////////////////////////////////////////////////////
