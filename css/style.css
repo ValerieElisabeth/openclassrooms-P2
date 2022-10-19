@@ -118,7 +118,7 @@ a {
 
 /*
 /////////////////////////////////////////////////////////
-////////////////////://// FLEXBOX ///////////////////////
+///////////////////////// FLEXBOX ///////////////////////
 /////////////////////////////////////////////////////////
 */
 
@@ -126,65 +126,31 @@ a {
   display: flex;
 }
 
-.d-flex-fd-c {
-  display: flex;
-  flex-direction: column;
-}
-
-.d-flex-fd-c-sb {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.d-flex-fd-r {
-  display: flex;
-  flex-direction: row;
-}
-
-.d-flex-jc-c {
-  display: flex;
-  justify-content: center;
-}
-
-.d-flex-ai-c {
-  display: flex;
-  align-items: center;
-}
-.d-flex-ai-jc-c {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.d-flex-jc-sb {
-  display: flex;
-  justify-content: space-between;
-}
-
-.d-flex-jc-fe {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.d-flex-jc-fs {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.d-flex-jc-sa {
-  display: flex;
-  justify-content: space-around;
-}
-
-.d-flex-fw {
-  display: flex;
+.fw {
   flex-wrap: wrap;
 }
 
-.d-flex-ai-b-jc-sb {
-  display: flex;
+.fd-c {
+  flex-direction: column;
+}
+
+.ai-b {
   align-items: baseline;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.jc-sa {
+  justify-content: space-around;
+}
+
+.jc-sb {
   justify-content: space-between;
 }
 
@@ -274,8 +240,7 @@ input::placeholder {
   opacity: 1;
 }
 
-.search-icon-desktop {
-  width: 132px;
+button {
   height: 49px;
   border-radius: 0px 15px 15px 0px;
   color: var(--color-02);
@@ -286,8 +251,13 @@ input::placeholder {
   font-weight: 600;
 }
 
-.test {
-  visibility: collapse;
+.search-icon-desktop {
+  width: 132px;
+}
+
+/* Collapse : se comporte comme la propriété : Hidden */
+.search-icon-mobile {
+  visibility: hidden;
 }
 
 /* ---------------------------------------------------- */
@@ -326,6 +296,11 @@ input::placeholder {
   background-color: var(--color-04);
 }
 
+/* Ombre sous le bouton : Économique */
+.filters > ul.b-shadow-filters {
+  box-shadow: none;
+}
+
 /* ---------------------------------------------------- */
 /* ------ Section : i : information ------------------- */
 /* ---------------------------------------------------- */
@@ -347,21 +322,18 @@ input::placeholder {
   display: none;
 }
 
-/* ------------------------------------------------------ */
-/* ------------------------------------------------------ */
-/* ------------------------------------------------------ */
-/* ------------------------------------------------------ */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////// VERSION TABLETTE ////////////////// */
+/* ////////////////////////////////////////////////////// */
 
-/*
-VERSION TABLETTE :
-Sur tous types d'écran quand la largeur de la fenêtre
-est comprise entre : 768px et 992px.
-*/
+/* Sur tous types d'écran de largeur de fenêtre comprise entre :
+768px et 992px. */
 
 @media all and (min-width: 768px) and (max-width: 992px) {
   /* ---------------------------------------------------- */
   /* ------ Section logo & nav -------------------------- */
   /* ---------------------------------------------------- */
+
   .right {
     border-top: solid 2px transparent;
     color: var(--color-01);
@@ -370,24 +342,18 @@ est comprise entre : 768px et 992px.
   /* ---------------------------------------------------- */
   /* ------ Section : Filter ---------------------------- */
   /* ---------------------------------------------------- */
+
   .filters > ul {
     margin-left: 15px;
   }
-
-  .filters-bg-color {
-    background-color: transparent;
-  }
 } /* fin @media queries tablette */
 
-/* ------------------------------------------------------ */
-/* ------------------------------------------------------ */
-/* ------------------------------------------------------ */
-/* ------------------------------------------------------ */
+/* ////////////////////////////////////////////////////// */
+/* //////////////////// VERSION MOBILE ////////////////// */
+/* ////////////////////////////////////////////////////// */
 
-/*
-VERSION MOBILE :
-Si l'écran plus petit ou égal à : 768px.
-*/
+/* Si l'écran est inférieur ou égal à : 768px */
+
 @media screen and (max-width: 768px) {
   /* ---------------------------------------------------- */
   /* ------ Section logo & nav -------------------------- */
@@ -397,6 +363,7 @@ Si l'écran plus petit ou égal à : 768px.
     max-width: 90%;
     margin: 0 auto 0;
   }
+
   .section-logo-nav {
     margin-top: 20px;
     flex-direction: column;
@@ -418,6 +385,10 @@ Si l'écran plus petit ou égal à : 768px.
   /* ------ Section Titre & baseline -------------------- */
   /* ---------------------------------------------------- */
 
+  .section-title {
+    margin-top: 40px;
+  }
+
   .section-title > h1 > br {
     display: inline;
   }
@@ -426,18 +397,17 @@ Si l'écran plus petit ou égal à : 768px.
   /* ------ Section rechercher -------------------------- */
   /* ---------------------------------------------------- */
 
+  .section-search {
+    margin-top: 30px;
+  }
+
   .search-icon-desktop {
     display: none;
   }
-  .test {
+
+  .search-icon-mobile {
     visibility: visible;
     width: 49px;
-    border-radius: 0px 15px 15px 0px;
-    color: var(--color-02);
-    background-color: var(--color-03);
-    border-style: none;
-    /* Font */
-    font-size: 18px;
   }
 
   /* ---------------------------------------------------- */
@@ -449,44 +419,38 @@ Si l'écran plus petit ou égal à : 768px.
   }
 
   .filters * {
-    /* Font */
     font-size: 11px;
   }
 
   .filters > p {
-    /* Font */
     font-size: 17px;
     margin-top: 20px;
   }
 
   .filters > ul {
-    height: 50px;
     width: 160px;
     margin: 10px 15px 5px 0px;
-    /* TEST */
-    /* border: solid 2px rgb(255, 47, 0); */
   }
 
   /* Les icônes */
   .filters > ul > i {
     margin-left: 10px;
-    color: var(--color-03);
-    /* Font */
     font-size: 20px;
-    /* TEST */
-    /* border: solid 1px rgb(255, 47, 0); */
   }
 
   /* Marges autour des textes */
   .filters > ul > li {
     margin-right: 10px;
-    /* TEST */
-    /* border: solid 1px rgb(0, 17, 255); */
   }
 
   .filters-bg-color {
     background-color: transparent;
   }
+  /* Ombre sous le bouton : Économique */
+  .filters > ul.b-shadow-filters {
+    box-shadow: 2px 2px 2px var(--color-05);
+  }
+
   /* ---------------------------------------------------- */
   /* ------  Section : i : information ------------------ */
   /* ---------------------------------------------------- */
@@ -544,12 +508,6 @@ Si l'écran plus petit ou égal à : 768px.
 
 .b-shadow {
   box-shadow: 2px 2px 20px var(--color-05);
-}
-
-/* ------ Ombre des filtres vs mobile ---------------------------- */
-
-.b-shadow-filters {
-  box-shadow: 2px 2px 5px var(--color-05);
 }
 
 /*
