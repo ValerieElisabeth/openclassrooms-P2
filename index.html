@@ -14,7 +14,7 @@
     <!-- LIEN VERS MON FCHIER CSS ------------------------------->
     <link rel="stylesheet" href="/css/style.css" />
 
-    <!-- LIEN VERS MON KIT FONT AWESOME PERSONNALISÉ ---------------------------------->
+    <!-- LIEN VERS MON KIT FONT AWESOME PERSONNALISÉ ------------->
     <script
       src="https://kit.fontawesome.com/de663da828.js"
       crossorigin="anonymous"
@@ -28,14 +28,23 @@
       rel="stylesheet"
     />
   </head>
-  <!-------------------------------------------------------------->
+  <!--------------------------------------------------------------->
 
   <body>
-    <!---------------- HEADER ------------------------------------->
+    <!--
+    ////////////////////////////////////////////////////////////////
+    ///////////////////////// HEADER ///////////////////////////////
+    ////////////////////////////////////////////////////////////////
+    -->
+
+    <!-------------------------------------------------------------->
+    <!--------------- Section logo & nav --------------------------->
+    <!-------------------------------------------------------------->
+
     <header class="container-01">
       <section class="section-logo-nav d-flex-ai-b-jc-sb">
-        <img src="/images/logo/Booki.png" alt="#" />
-        <nav class="">
+        <img src="/images/logo/Booki.png" alt="logo-site-booki" />
+        <nav>
           <ul class="d-flex">
             <li class="right d-flex-jc-c">Hébergements</li>
             <li class="left d-flex-jc-c">Activités</li>
@@ -43,26 +52,41 @@
         </nav>
       </section>
 
+      <!-------------------------------------------------------------->
+      <!--------------- Section Titre & baseline --------------------->
+      <!-------------------------------------------------------------->
+
       <section class="section-title container-03">
-        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+        <h1>
+          Trouvez votre hébergement <br />
+          pour des vacances de rêve
+        </h1>
         <p>En plein centre-ville ou en pleine nature</p>
       </section>
+
+      <!-------------------------------------------------------------->
+      <!--------------- Section rechercher --------------------------->
+      <!-------------------------------------------------------------->
 
       <form class="d-flex container-04" action="">
         <div class="d-flex-ai-jc-c">
           <i class="fa-sharp fa-solid fa-location-dot"></i>
         </div>
         <input type="text" placeholder="Marseille, France" />
-        <button>Rechercher</button>
-        <button class="search-icon-mobile">
+        <button class="search-icon-desktop">Rechercher</button>
+        <button class="test">
           <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
 
+      <!-------------------------------------------------------------->
+      <!--------------- Section : Filter ----------------------------->
+      <!-------------------------------------------------------------->
+
       <section class="d-flex-ai-c filters container-04">
         <p>Filtres</p>
         <section class="d-flex filters">
-          <ul class="d-flex-ai-c">
+          <ul class="d-flex-ai-c b-shadow-filters">
             <i class="fa-sharp fa-solid fa-ticket"></i>
             <li>Économique</li>
           </ul>
@@ -81,13 +105,24 @@
         </section>
       </section>
 
+      <!-------------------------------------------------------------->
+      <!--------------- Section : i : information -------------------->
+      <!-------------------------------------------------------------->
+
       <section class="d-flex-ai-c container-04 section-info">
         <div class="d-flex-ai-jc-c"><i class="fa-solid fa-info"></i></div>
-        <p>Plus de 500 logements sont disponibles dans cette ville</p>
+        <p>
+          Plus de 500 logements sont disponibles <br />
+          dans cette ville
+        </p>
       </section>
     </header>
 
-    <!---------------- MAIN ----- hébergements à Marseille -------------------------------->
+    <!--
+    ////////////////////////////////////////////////////////////////
+    //////////// MAIN ////// hébergements à Marseille //////////////
+    ////////////////////////////////////////////////////////////////
+    -->
 
     <main class="container-02">
       <section class="d-flex-jc-sb">
@@ -213,7 +248,12 @@
           </section>
           <button>Afficher plus</button>
         </section>
-        <!---------------- MAIN / ASIDE ----- Les plus populaires -------------------------------->
+
+        <!--
+        ////////////////////////////////////////////////////////////////
+        /////// MAIN / ASIDE ////// Les plus populaires ////////////////
+        ////////////////////////////////////////////////////////////////
+        -->
 
         <aside id="main-aside">
           <div class="d-flex-jc-sa">
@@ -284,7 +324,12 @@
           </article>
         </aside>
       </section>
-      <!---------------- MAIN ----- Activités à Marseille -------------------------------->
+
+      <!--
+      ////////////////////////////////////////////////////////////////
+      /////////// MAIN /////// Activités à Marseille /////////////////
+      ////////////////////////////////////////////////////////////////
+      -->
 
       <section id="main-activity" class="container-03">
         <h2>Activités à Marseille</h2>
@@ -336,7 +381,11 @@
       </section>
     </main>
 
-    <!---------------- FOOTER ------------------------------------->
+    <!--
+    ////////////////////////////////////////////////////////////////
+    /////////////////// FOOTER /////////////////////////////////////
+    ////////////////////////////////////////////////////////////////
+    -->
 
     <footer class="container-02">
       <section class="d-flex-jc-sa">

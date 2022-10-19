@@ -93,7 +93,7 @@ a {
   max-width: 95%;
   margin: 0 auto 0;
   /* TEST */
-  border: solid 2px red;
+  /* border: solid 2px red; */
 }
 
 .container-02 {
@@ -230,7 +230,12 @@ nav > ul > li {
   font-weight: 700;
 }
 
+.section-title > h1 > br {
+  display: none;
+}
+
 .section-title > p {
+  margin-top: 8px;
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
@@ -269,7 +274,7 @@ input::placeholder {
   opacity: 1;
 }
 
-button {
+.search-icon-desktop {
   width: 132px;
   height: 49px;
   border-radius: 0px 15px 15px 0px;
@@ -280,10 +285,9 @@ button {
   font-size: 18px;
   font-weight: 600;
 }
-.search-icon-mobile {
-  width: 49px;
-  height: 49px;
-  display: none;
+
+.test {
+  visibility: collapse;
 }
 
 /* ---------------------------------------------------- */
@@ -339,10 +343,14 @@ button {
   margin-left: 10px;
 }
 
-/* ---------------------------------------------------- */
-/* ---------------------------------------------------- */
-/* ---------------------------------------------------- */
-/* ---------------------------------------------------- */
+.section-info > p > br {
+  display: none;
+}
+
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
 
 /*
 VERSION TABLETTE :
@@ -354,7 +362,6 @@ est comprise entre : 768px et 992px.
   /* ---------------------------------------------------- */
   /* ------ Section logo & nav -------------------------- */
   /* ---------------------------------------------------- */
-
   .right {
     border-top: solid 2px transparent;
     color: var(--color-01);
@@ -363,9 +370,7 @@ est comprise entre : 768px et 992px.
   /* ---------------------------------------------------- */
   /* ------ Section : Filter ---------------------------- */
   /* ---------------------------------------------------- */
-
   .filters > ul {
-    height: 50px;
     margin-left: 15px;
   }
 
@@ -374,17 +379,123 @@ est comprise entre : 768px et 992px.
   }
 } /* fin @media queries tablette */
 
-/* ---------------------------------------------------- */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
 
 /*
 VERSION MOBILE :
 Si l'écran plus petit ou égal à : 768px.
 */
 @media screen and (max-width: 768px) {
-  header {
-    background-color: rgb(249, 238, 222);
+  /* ---------------------------------------------------- */
+  /* ------ Section logo & nav -------------------------- */
+  /* ---------------------------------------------------- */
+
+  .container-01 {
+    max-width: 90%;
+    margin: 0 auto 0;
+  }
+  .section-logo-nav {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav > ul > li {
+    width: 187px;
+    padding-top: 60px;
+  }
+
+  .right {
+    padding-bottom: 20px;
+    border-bottom: solid 3px;
+    border-top: transparent;
+  }
+
+  /* ---------------------------------------------------- */
+  /* ------ Section Titre & baseline -------------------- */
+  /* ---------------------------------------------------- */
+
+  .section-title > h1 > br {
+    display: inline;
+  }
+
+  /* ---------------------------------------------------- */
+  /* ------ Section rechercher -------------------------- */
+  /* ---------------------------------------------------- */
+
+  .search-icon-desktop {
+    display: none;
+  }
+  .test {
+    visibility: visible;
+    width: 49px;
+    border-radius: 0px 15px 15px 0px;
+    color: var(--color-02);
+    background-color: var(--color-03);
+    border-style: none;
+    /* Font */
+    font-size: 18px;
+  }
+
+  /* ---------------------------------------------------- */
+  /* ------ Section : Filter ---------------------------- */
+  /* ---------------------------------------------------- */
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .filters * {
+    /* Font */
+    font-size: 11px;
+  }
+
+  .filters > p {
+    /* Font */
+    font-size: 17px;
+    margin-top: 20px;
+  }
+
+  .filters > ul {
+    height: 50px;
+    width: 160px;
+    margin: 10px 15px 5px 0px;
+    /* TEST */
+    /* border: solid 2px rgb(255, 47, 0); */
+  }
+
+  /* Les icônes */
+  .filters > ul > i {
+    margin-left: 10px;
+    color: var(--color-03);
+    /* Font */
+    font-size: 20px;
+    /* TEST */
+    /* border: solid 1px rgb(255, 47, 0); */
+  }
+
+  /* Marges autour des textes */
+  .filters > ul > li {
+    margin-right: 10px;
+    /* TEST */
+    /* border: solid 1px rgb(0, 17, 255); */
+  }
+
+  .filters-bg-color {
+    background-color: transparent;
+  }
+  /* ---------------------------------------------------- */
+  /* ------  Section : i : information ------------------ */
+  /* ---------------------------------------------------- */
+
+  .section-info > p > br {
+    display: inline;
   }
 } /* fin @media queries mobile */
+
 /* ---------------------------------------------------- */
 
 /*
@@ -433,6 +544,12 @@ Si l'écran plus petit ou égal à : 768px.
 
 .b-shadow {
   box-shadow: 2px 2px 20px var(--color-05);
+}
+
+/* ------ Ombre des filtres vs mobile ---------------------------- */
+
+.b-shadow-filters {
+  box-shadow: 2px 2px 5px var(--color-05);
 }
 
 /*
