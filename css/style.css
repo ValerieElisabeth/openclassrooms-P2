@@ -33,10 +33,12 @@ body {
 
 :root {
   --color-01: black;
+  --color-01-sha: rgba(0, 0, 0, 0.2);
   --color-02: white;
-  --color-03: rgb(0, 101, 252);
-  --color-04: rgb(222, 235, 255);
-  --color-05: rgb(217, 217, 217);
+  --color-03: #0065fc;
+  --color-04: #deebff;
+  --color-05: #d9d9d9;
+  --color-05-sha: rgba(217, 217, 217, 0.4);
 }
 
 /*
@@ -55,6 +57,10 @@ p {
   padding: 0;
 }
 
+h2 {
+  margin-top: 45px;
+  margin-bottom: 10px;
+}
 /*
 ///////////////////// < ul > /////////////////////////////
 */
@@ -81,6 +87,11 @@ a {
   margin: 0;
   padding: 0;
   color: rgb(0, 204, 255);
+}
+
+button {
+  border-style: none;
+  background-color: transparent;
 }
 
 /*
@@ -142,6 +153,10 @@ a {
   align-items: center;
 }
 
+.ai-s {
+  align-items: stretch;
+}
+
 .jc-c {
   justify-content: center;
 }
@@ -154,6 +169,13 @@ a {
   justify-content: space-between;
 }
 
+.ac-sb {
+  align-content: space-between;
+}
+
+.ac-sa {
+  align-content: space-around;
+}
 /*
 /////////////////////////////////////////////////////////
 ///////////////////////// HEADER ////////////////////////
@@ -219,7 +241,7 @@ form > div {
   width: 50px;
   height: 49px;
   border-radius: 15px 0px 0px 15px;
-  background-color: var(--color-05);
+  background-color: var(--color-05-sha);
   /* Font */
   font-size: 20px;
   /* TEST */
@@ -240,12 +262,11 @@ input::placeholder {
   opacity: 1;
 }
 
-button {
+form > button {
   height: 49px;
   border-radius: 0px 15px 15px 0px;
   color: var(--color-02);
   background-color: var(--color-03);
-  border-style: none;
   /* Font */
   font-size: 18px;
   font-weight: 600;
@@ -323,7 +344,7 @@ button {
 }
 
 /* ////////////////////////////////////////////////////// */
-/* ////////////////// VERSION TABLETTE ////////////////// */
+/* //////////// HEADER VERSION TABLETTE ///////////////// */
 /* ////////////////////////////////////////////////////// */
 
 /* Sur tous types d'écran de largeur de fenêtre comprise entre :
@@ -349,7 +370,7 @@ button {
 } /* fin @media queries tablette */
 
 /* ////////////////////////////////////////////////////// */
-/* //////////////////// VERSION MOBILE ////////////////// */
+/* ///////////// HEADER VERSION MOBILE ////////////////// */
 /* ////////////////////////////////////////////////////// */
 
 /* Si l'écran est inférieur ou égal à : 768px */
@@ -507,22 +528,26 @@ button {
 /* ------ Ombre des cartes ---------------------------- */
 
 .b-shadow {
-  box-shadow: 2px 2px 20px var(--color-05);
+  box-shadow: 5px 5px 10px var(--color-01-sha);
 }
-
 /*
 /////////////////////////////////////////////////////////
 ////////// MAIN //// Hébergement à Marseille ////////////
 /////////////////////////////////////////////////////////
 */
-
+.test {
+  border: solid 2px rgb(255, 47, 0);
+}
 /* section : background hébergement à Marseille */
 
 #main-apartment {
-  background-color: var(--color-04);
+  background-color: var(--color-05-sha);
   height: 626px;
   width: 880px;
   border-radius: 20px;
+  /* Permet de réduire l'espace entre les cartes */
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 /* carte des hébergements */
@@ -531,22 +556,18 @@ button {
   width: 246px;
   height: 199px;
   border-radius: 20px;
-  border: solid 1px rgb(161, 87, 165);
   display: flex;
   flex-direction: column;
-
-  /* TEST */
   background-color: var(--color-02);
+  /* Met un espace homogène autour de chaque carte */
+  margin: 15px;
 }
 
 .card-apartment > div {
-  margin-left: 5px;
+  margin-left: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
-  /* TEST */
-  /* border: solid 1px rgb(165, 130, 87); */
 }
 
 /* carte des hébergements */
@@ -559,6 +580,18 @@ button {
   /* White */
   border: 5px solid var(--color-02);
   border-radius: 20px 20px 0px 0px;
+}
+
+#main-apartment > h2 {
+  margin-left: 20px;
+}
+
+#main-apartment > button {
+  margin-left: 20px;
+  margin-top: 18px;
+  /* Font */
+  font-size: 18px;
+  font-weight: 700;
 }
 
 /*
