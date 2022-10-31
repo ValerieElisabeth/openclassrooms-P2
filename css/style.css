@@ -13,7 +13,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box; /* facilite et simplifie la gestion de la taille des éléments d'un navigateur à l'autre */
-  max-width: 1400px; /* Largeur max du site */
+  max-width: 1440px; /* Largeur max du site */
   margin: auto; /* A pour effet de centrer le site dans la page du navigateur */
   /* TEST */
   border: solid 2px rgb(17, 255, 0);
@@ -59,7 +59,7 @@ p {
 
 h2 {
   margin-top: 45px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 /*
 ///////////////////// < ul > /////////////////////////////
@@ -101,17 +101,17 @@ button {
 */
 
 .container-01 {
-  max-width: 95%;
+  max-width: 93%;
   margin: 0 auto 0;
   /* TEST */
   /* border: solid 2px red; */
 }
 
 .container-02 {
-  max-width: 95%;
+  max-width: 93%;
   margin: 20px auto;
   /* TEST */
-  border: solid 2px rgb(0, 68, 255);
+  /* border: solid 2px rgb(0, 68, 255); */
 }
 
 .container-03 {
@@ -157,12 +157,24 @@ button {
   align-items: stretch;
 }
 
+.ai-fe {
+  align-items: flex-end;
+}
+
 .jc-c {
   justify-content: center;
 }
 
 .jc-sa {
   justify-content: space-around;
+}
+
+.jc-fe {
+  justify-content: flex-end;
+}
+
+.jc-fs {
+  justify-content: flex-start;
 }
 
 .jc-sb {
@@ -175,6 +187,10 @@ button {
 
 .ac-sa {
   align-content: space-around;
+}
+
+.ac-fe {
+  align-content: flex-end;
 }
 /*
 /////////////////////////////////////////////////////////
@@ -276,7 +292,7 @@ form > button {
   width: 132px;
 }
 
-/* Collapse : se comporte comme la propriété : Hidden */
+/* Cache la loupe */
 .search-icon-mobile {
   visibility: hidden;
 }
@@ -347,13 +363,14 @@ form > button {
 /* //////////// HEADER VERSION TABLETTE ///////////////// */
 /* ////////////////////////////////////////////////////// */
 
-/* Sur tous types d'écran de largeur de fenêtre comprise entre :
-768px et 992px. */
-
-@media all and (min-width: 768px) and (max-width: 992px) {
+/* Si l'écran est inférieur ou égal à : 992px */
+@media screen and (max-width: 992px) {
   /* ---------------------------------------------------- */
   /* ------ Section logo & nav -------------------------- */
   /* ---------------------------------------------------- */
+  header {
+    /* background-color: antiquewhite; */
+  }
 
   .right {
     border-top: solid 2px transparent;
@@ -365,7 +382,7 @@ form > button {
   /* ---------------------------------------------------- */
 
   .filters > ul {
-    margin-left: 15px;
+    margin-left: 10px;
   }
 } /* fin @media queries tablette */
 
@@ -374,11 +391,14 @@ form > button {
 /* ////////////////////////////////////////////////////// */
 
 /* Si l'écran est inférieur ou égal à : 768px */
-
 @media screen and (max-width: 768px) {
   /* ---------------------------------------------------- */
   /* ------ Section logo & nav -------------------------- */
   /* ---------------------------------------------------- */
+
+  header {
+    /* background-color: rgb(247, 240, 224); */
+  }
 
   .container-01 {
     max-width: 90%;
@@ -400,6 +420,7 @@ form > button {
     padding-bottom: 20px;
     border-bottom: solid 3px;
     border-top: transparent;
+    color: var(--color-03);
   }
 
   /* ---------------------------------------------------- */
@@ -535,32 +556,37 @@ form > button {
 ////////// MAIN //// Hébergement à Marseille ////////////
 /////////////////////////////////////////////////////////
 */
-.test {
-  border: solid 2px rgb(255, 47, 0);
-}
+
 /* section : background hébergement à Marseille */
 
 #main-apartment {
   background-color: var(--color-05-sha);
-  height: 626px;
-  width: 880px;
+  width: 920px;
   border-radius: 20px;
-  /* Permet de réduire l'espace entre les cartes */
+
+  /* Met un espace à l'intérieur de ma section à droite et à gauche */
   padding-left: 25px;
   padding-right: 25px;
+
+  /* TEST */
+  /* border: solid 3px rgb(214, 121, 213); */
 }
 
-/* carte des hébergements */
-
 .card-apartment {
+  /* carte des hébergements */
   width: 246px;
   height: 199px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   background-color: var(--color-02);
-  /* Met un espace homogène autour de chaque carte */
-  margin: 15px;
+}
+
+.mb {
+  /* Met un espace sous certaines cartes */
+  margin-bottom: 35px;
+  /* TEST */
+  /* border: solid 1px rgb(255, 238, 0); */
 }
 
 .card-apartment > div {
@@ -588,7 +614,8 @@ form > button {
 
 #main-apartment > button {
   margin-left: 20px;
-  margin-top: 18px;
+  margin-top: 50px;
+  margin-bottom: 40px;
   /* Font */
   font-size: 18px;
   font-weight: 700;
@@ -602,21 +629,32 @@ form > button {
 
 /* aside : background Les plus populaires */
 #main-aside {
-  background-color: var(--color-05);
-  height: 625px;
+  background-color: var(--color-05-sha);
   width: 420px;
   border-radius: 20px;
+  /* Marge et padding bloc "les plus populaires" */
+  margin-left: 35px;
+  padding-bottom: 10px;
+  /* TEST */
+  /* border: solid 2px rgb(9, 255, 0); */
+}
+
+/* Bloc titre : les plus populaires */
+#main-aside > div {
+  width: 343px;
+  color: var(--color-03);
 }
 
 /* carte aside : les plus populaires */
-
 .card-aside {
   height: 144px;
   width: 343px;
   border-radius: 20px;
+
+  /* marges droite et gauche des cartes aside */
+  margin-right: 15px;
+  margin-left: 15px;
   background-color: var(--color-02);
-  /* TEST */
-  /* border: solid 3px rgb(0, 145, 255); */
 }
 
 .img-aside {
@@ -628,13 +666,16 @@ form > button {
   /* TEST */
   border: 5px solid var(--color-02);
 }
+
 .card-aside > div {
   padding-top: 16px;
   padding-bottom: 12px;
-
+  margin-right: 8px;
+  margin-left: 15px;
   /* TEST */
-  /* border: solid 3px rgb(255, 234, 0); */
+  /* border: solid 3px rgb(225, 255, 0); */
 }
+
 /*
 /////////////////////////////////////////////////////////
 /////// MAIN //// Activités à Marseille /////////////////
@@ -643,11 +684,10 @@ form > button {
 
 #main-activity {
   /* TEST */
-  border: solid 2px rgb(255, 47, 0);
+  /* border: solid 2px rgb(255, 47, 0); */
 }
 
 /* carte : activités */
-
 .card-activity {
   width: 302px;
   height: 445px;
@@ -676,3 +716,57 @@ form > button {
 .portrait-img {
   height: 396px;
 }
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* /////////////// MAIN PARTIE RESPONSIVE //////////////// */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media screen and (max-width: 992px) {
+  /* Si l'écran est inférieur ou égal à : 992px */
+
+  /* /////////////////////////////////////////////////////// */
+  /* //// MAIN VERSION TABLETTE /// Les plus polulaires //// */
+  /* /////////////////////////////////////////////////////// */
+
+  #main-aside {
+    height: 278px;
+    width: 920px;
+    /* padding bloc "les plus populaires" */
+    margin-left: 0px;
+    margin-top: 40px;
+  }
+
+  /* Bloc titre : les plus populaires */
+  #main-aside > div {
+    width: 800px;
+  }
+
+  main > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* carte aside : les plus populaires */
+  .card-aside {
+    width: 252px;
+  }
+
+  article {
+    display: flex;
+  }
+
+  .card-aside > div {
+    margin-left: 7px;
+    margin-right: 8px;
+  }
+
+  /* Interlettrage spécifique plus resserré */
+  .card-p-letter-spacing {
+    letter-spacing: -0.5px;
+  }
+
+  .img-aside {
+    width: 106px;
+  }
+} /* fin @media queries tablette */
