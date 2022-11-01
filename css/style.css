@@ -124,10 +124,10 @@ button {
 }
 
 .container-03 {
-  margin: 20px auto;
+  margin: 25px auto;
   /*
   MARGES
-  HautBas = 20px.
+  HautBas = 25px.
   DroiteGauche = auto.
   */
 }
@@ -256,7 +256,7 @@ nav > ul > li {
 }
 
 .section-title > p {
-  margin-top: 8px;
+  margin-top: 4px;
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
@@ -266,26 +266,21 @@ nav > ul > li {
 /* ------ Section rechercher -------------------------- */
 /* ---------------------------------------------------- */
 
-form {
-  font-size: 0px; /* permet de supprimer l'espace avant et après l'input */
-}
-
 form > div {
   width: 50px;
   height: 49px;
   border-radius: 15px 0px 0px 15px;
   background-color: var(--color-05-sha);
+  border: solid 1px var(--color-05-sha);
   /* Font */
   font-size: 20px;
-  /* TEST */
-  /* border: solid red; */
 }
 
 input {
   width: 230px;
   height: 49px;
   padding-left: 16px;
-  border: solid 1px var(--color-05);
+  border: solid 1px var(--color-05-sha);
   /* Font */
   font-size: 18px;
   font-weight: 700;
@@ -359,6 +354,10 @@ form > button {
 /* ------ Section : i : information ------------------- */
 /* ---------------------------------------------------- */
 
+.section-info {
+  margin-bottom: 35px;
+}
+
 .section-info > div {
   font-size: 12px;
   height: 24px;
@@ -372,152 +371,10 @@ form > button {
   margin-left: 10px;
 }
 
+/* Empèche le retour à la ligne */
 .section-info > p > br {
   display: none;
 }
-
-/* ////////////////////////////////////////////////////// */
-/* //////////// HEADER VERSION TABLETTE ///////////////// */
-/* ////////////////////////////////////////////////////// */
-
-/* Si l'écran est inférieur ou égal à : 992px */
-@media screen and (max-width: 992px) {
-  /* ---------------------------------------------------- */
-  /* ------ Section logo & nav -------------------------- */
-  /* ---------------------------------------------------- */
-  header {
-    /* background-color: antiquewhite; */
-  }
-
-  .right {
-    border-top: solid 2px transparent;
-    color: var(--color-01);
-  }
-
-  /* ---------------------------------------------------- */
-  /* ------ Section : Filter ---------------------------- */
-  /* ---------------------------------------------------- */
-
-  .filters > ul {
-    margin-left: 10px;
-  }
-} /* fin @media queries tablette */
-
-/* ////////////////////////////////////////////////////// */
-/* ///////////// HEADER VERSION MOBILE ////////////////// */
-/* ////////////////////////////////////////////////////// */
-
-/* Si l'écran est inférieur ou égal à : 768px */
-@media screen and (max-width: 768px) {
-  /* ---------------------------------------------------- */
-  /* ------ Section logo & nav -------------------------- */
-  /* ---------------------------------------------------- */
-
-  header {
-    /* background-color: rgb(247, 240, 224); */
-  }
-
-  .container-01 {
-    max-width: 90%;
-    margin: 0 auto 0;
-  }
-
-  .section-logo-nav {
-    margin-top: 20px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav > ul > li {
-    width: 187px;
-    padding-top: 60px;
-  }
-
-  .right {
-    padding-bottom: 20px;
-    border-bottom: solid 3px;
-    border-top: transparent;
-    color: var(--color-03);
-  }
-
-  /* ---------------------------------------------------- */
-  /* ------ Section Titre & baseline -------------------- */
-  /* ---------------------------------------------------- */
-
-  .section-title {
-    margin-top: 40px;
-  }
-
-  .section-title > h1 > br {
-    display: inline;
-  }
-
-  /* ---------------------------------------------------- */
-  /* ------ Section rechercher -------------------------- */
-  /* ---------------------------------------------------- */
-
-  .section-search {
-    margin-top: 30px;
-  }
-
-  .search-icon-desktop {
-    display: none;
-  }
-
-  .search-icon-mobile {
-    visibility: visible;
-    width: 49px;
-  }
-
-  /* ---------------------------------------------------- */
-  /* ------ Section : Filter ---------------------------- */
-  /* ---------------------------------------------------- */
-
-  .filters {
-    flex-wrap: wrap;
-  }
-
-  .filters * {
-    font-size: 11px;
-  }
-
-  .filters > p {
-    font-size: 17px;
-    margin-top: 20px;
-  }
-
-  .filters > ul {
-    width: 160px;
-    margin: 10px 15px 5px 0px;
-  }
-
-  /* Les icônes */
-  .filters > ul > i {
-    margin-left: 10px;
-    font-size: 20px;
-  }
-
-  /* Marges autour des textes */
-  .filters > ul > li {
-    margin-right: 10px;
-  }
-
-  .filters-bg-color {
-    background-color: transparent;
-  }
-  /* Ombre sous le bouton : Économique */
-  .filters > ul.b-shadow-filters {
-    box-shadow: 2px 2px 2px var(--color-05);
-  }
-
-  /* ---------------------------------------------------- */
-  /* ------  Section : i : information ------------------ */
-  /* ---------------------------------------------------- */
-
-  .section-info > p > br {
-    display: inline;
-  }
-} /* fin @media queries mobile */
 
 /* ---------------------------------------------------- */
 
@@ -584,9 +441,6 @@ form > button {
   /* Met un espace à l'intérieur de ma section à droite et à gauche */
   padding-left: 25px;
   padding-right: 25px;
-
-  /* TEST */
-  /* border: solid 3px rgb(214, 121, 213); */
 }
 
 .card-apartment {
@@ -652,13 +506,11 @@ form > button {
   /* Marge et padding bloc "les plus populaires" */
   margin-left: 35px;
   padding-bottom: 10px;
-  /* TEST */
-  /* border: solid 2px rgb(9, 255, 0); */
 }
 
 /* Bloc titre : les plus populaires */
 #main-aside > div {
-  width: 343px;
+  width: 330px;
   color: var(--color-03);
 }
 
@@ -700,10 +552,14 @@ form > button {
 */
 
 #main-activity {
+  /*
+  Marges au dessus et au dessous
+  de la section Activités à Marseille
+  */
+  margin-top: 70px;
   margin-bottom: 60px;
-
   /* TEST */
-  /* border: solid 2px rgb(255, 47, 0); */
+  /* background-color: rgb(233, 230, 230); */
 }
 
 /* carte : activités */
@@ -712,7 +568,7 @@ form > button {
   height: 445px;
   border-radius: 20px;
 }
-
+/* Images des cartes */
 .img-activity {
   width: 302px;
   height: 445px;
@@ -720,9 +576,15 @@ form > button {
   object-fit: cover;
 }
 
+/* Image Fort de Pomègues : personnalisée en hauteur */
+.portrait-img {
+  height: 396px;
+}
+
+/* div : qui contient le h3 */
 .card-activity > div {
-  height: 56px;
   width: 302px;
+  height: 56px;
 }
 
 .card-activity > div > h3 {
@@ -731,21 +593,76 @@ form > button {
   margin-top: 15px;
 }
 
-.portrait-img {
-  /* image Fort de Pomègues : contrainte en hauteur */
-  height: 396px;
+/* Empèche le retour à la ligne */
+.card-activity > div > h3 > br {
+  display: none;
 }
 
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* /////////////// MAIN PARTIE RESPONSIVE //////////////// */
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*
+/////////////////////////////////////////////////////////
+///////////////////////// FOOTER ////////////////////////
+/////////////////////////////////////////////////////////
+*/
+
+footer {
+  height: 225px;
+  background-color: var(--color-05-sha);
+  /* TEST */
+  /* border: solid 2px rgb(0, 255, 238); */
+}
+
+footer > section {
+  width: 1340px;
+}
+
+footer > section > div {
+  width: 280px;
+  line-height: 30px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* / / / / / / / / /  R E S P O N S I V E  / / / / / / / / */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/*
+------------------------------------------------------------
+o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o 
+------------------------------------------------------------ 
+                          HEADER
+------------------------------------------------------------
+*/
 
 @media screen and (max-width: 992px) {
   /* Si l'écran est inférieur ou égal à : 992px */
 
-  /* /////////////////////////////////////////////////////// */
-  /* //// MAIN VERSION TABLETTE /// Les plus polulaires //// */
-  /* /////////////////////////////////////////////////////// */
+  /* ---------------------------------------------------- */
+  /* ------- Header : Section logo & nav Tablette ------- */
+  /* ---------------------------------------------------- */
+
+  .right {
+    border-top: solid 2px transparent;
+    color: var(--color-01);
+  }
+
+  /* ---------------------------------------------------- */
+  /* ------- Header : Section : Filter Tablette --------- */
+  /* ---------------------------------------------------- */
+
+  .filters > ul {
+    margin-left: 10px;
+  }
+
+  /*
+  ------------------------------------------------------------
+  o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o 
+  ------------------------------------------------------------ 
+                              MAIN
+  ------------------------------------------------------------
+  */
+
+  /* ------------------------------------------------------- */
+  /* -------- Main : Les plus polulaires Tablette ---------- */
+  /* ------------------------------------------------------- */
 
   #main-aside {
     height: 278px;
@@ -788,26 +705,193 @@ form > button {
   .img-aside {
     width: 106px;
   }
+
+  /* ---------------------------------------------------- */
+  /* ------ Main : Activités à Marseille Tablette ------- */
+  /* ---------------------------------------------------- */
+
+  #main-activity {
+    display: flex;
+    align-items: stretch;
+    margin-top: 20px;
+    /* TEST */
+    /* background-color: rgb(233, 230, 230); */
+  }
+
+  /* carte : activités */
+  .card-activity {
+    width: 182px;
+    height: 267px;
+  }
+
+  /* carte : images */
+  .img-activity {
+    width: 182px;
+    height: 212px;
+  }
+
+  /* image Fort de Pomègues : contrainte en hauteur
+  images N°2 hauteur personnalisée */
+  .portrait-img {
+    height: 212px;
+  }
+
+  /* div : qui contient le h3 */
+  .card-activity > div {
+    width: 182px;
+  }
+
+  .card-activity > div > h3 {
+    /* Titre h3 des cartes : Activités à Marseille */
+    margin-top: 8px;
+  }
+
+  /* Rétablie le retour à la ligne */
+  .card-activity > div > h3 > br {
+    display: inline;
+  }
+
+  /*
+  ------------------------------------------------------------
+  o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o 
+  ------------------------------------------------------------ 
+                              FOOTER
+  ------------------------------------------------------------
+  */
+
+  footer > section {
+    width: 880px;
+  }
+
+  footer > section > div {
+    width: 200px;
+    /* TEST */
+    /* border: solid 1px red; */
+  }
 } /* fin @media queries tablette */
 
 /*
-/////////////////////////////////////////////////////////
-///////////////////////// FOOTER ////////////////////////
-/////////////////////////////////////////////////////////
+--------------------------------------------------------------
+o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o 
+-------------------------------------------------------------- 
+                            HEADER
+--------------------------------------------------------------
 */
 
-footer {
-  height: 225px;
-  background-color: var(--color-05-sha);
-  /* TEST */
-  /* border: solid 2px rgb(0, 255, 238); */
-}
+@media screen and (max-width: 768px) {
+  /* Si l'écran est inférieur ou égal à : 768px */
 
-footer > section {
-  width: 1340px;
-}
+  /* ------------------------------------------------------ */
+  /* --------- Header : section logo & nav Mobile --------- */
+  /* ------------------------------------------------------ */
 
-footer > section > div {
-  width: 280px;
-  line-height: 30px;
-}
+  header {
+    background-color: rgb(255, 240, 206);
+  }
+
+  .container-01 {
+    max-width: 88%;
+  }
+
+  .section-logo-nav {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav > ul > li {
+    width: 190px;
+    padding-top: 60px;
+  }
+
+  .right {
+    padding-bottom: 20px;
+    border-bottom: solid 3px;
+    margin-left: 0px;
+    border-top: transparent;
+    color: var(--color-03);
+  }
+
+  /* ---------------------------------------------------- */
+  /* ----- Header : section Titre & baseline Mobile ----- */
+  /* ---------------------------------------------------- */
+
+  .section-title {
+    margin-top: 40px;
+  }
+
+  /* Rétablie le retour à la ligne */
+  .section-title > h1 > br {
+    display: inline;
+  }
+
+  /* ---------------------------------------------------- */
+  /* ----- Header : section rechercher Mobile ----------- */
+  /* ---------------------------------------------------- */
+
+  .section-search {
+    margin-top: 30px;
+  }
+
+  .search-icon-desktop {
+    display: none;
+  }
+
+  .search-icon-mobile {
+    visibility: visible;
+    width: 49px;
+  }
+
+  /* ---------------------------------------------------- */
+  /* ----- Header : section : Filter Mobile ------------- */
+  /* ---------------------------------------------------- */
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .filters * {
+    font-size: 11px;
+  }
+  .filters > section {
+    /* Section qui englobe les 4 boutons des filtres */
+    justify-content: space-between;
+  }
+
+  .filters > p {
+    font-size: 17px;
+    margin-top: 20px;
+  }
+
+  .filters > ul {
+    width: 160px;
+    margin: 8px 0px;
+  }
+
+  /* Les icônes */
+  .filters > ul > i {
+    margin-left: 15px;
+    font-size: 20px;
+  }
+
+  /* Marges autour des textes */
+  .filters > ul > li {
+    margin-right: 10px;
+  }
+
+  .filters-bg-color {
+    background-color: transparent;
+  }
+  /* Ombre sous le bouton : Économique */
+  .filters > ul.b-shadow-filters {
+    box-shadow: 2px 2px 2px var(--color-05);
+  }
+
+  /* ---------------------------------------------------- */
+  /* ---- Header : section : i : information Mobile ----- */
+  /* ---------------------------------------------------- */
+
+  .section-info > p > br {
+    display: inline;
+  }
+} /* fin @media queries mobile */
