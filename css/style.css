@@ -59,7 +59,7 @@ p {
 
 h2 {
   margin-top: 45px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 /*
 ///////////////////// < ul > /////////////////////////////
@@ -100,31 +100,36 @@ button {
 /////////////////////////////////////////////////////////
 */
 
+/* TEST */
+/* border: solid 2px rgb(0, 68, 255); */
+
 .container-01 {
   max-width: 93%;
-  margin: 0 auto 0;
-  /* TEST */
-  /* border: solid 2px red; */
+  margin: 0px auto;
+  /*
+  MARGES
+  HautBas = 0px.
+  DroiteGauche = auto.
+  */
 }
 
 .container-02 {
   max-width: 93%;
   margin: 20px auto;
-  /* TEST */
-  /* border: solid 2px rgb(0, 68, 255); */
+  /*
+  MARGES
+  HautBas = 20px.
+  DroiteGauche = auto.
+  */
 }
 
 .container-03 {
-  margin: 60px auto 0px auto;
-  /* TEST */
-  /* border: solid 2px rgb(64, 255, 0);
-  background-color: rgb(255, 204, 0); */
-}
-
-.container-04 {
   margin: 20px auto;
-  /* TEST */
-  /* border: solid 2px rgb(0, 255, 17); */
+  /*
+  MARGES
+  HautBas = 20px.
+  DroiteGauche = auto.
+  */
 }
 
 /*
@@ -161,6 +166,10 @@ button {
   align-items: flex-end;
 }
 
+.ai-fs {
+  align-items: flex-start;
+}
+
 .jc-c {
   justify-content: center;
 }
@@ -185,6 +194,10 @@ button {
   align-content: space-between;
 }
 
+.ac-c {
+  align-content: center;
+}
+
 .ac-sa {
   align-content: space-around;
 }
@@ -192,6 +205,7 @@ button {
 .ac-fe {
   align-content: flex-end;
 }
+
 /*
 /////////////////////////////////////////////////////////
 ///////////////////////// HEADER ////////////////////////
@@ -232,6 +246,9 @@ nav > ul > li {
 .section-title > h1 {
   font-size: 22px;
   font-weight: 700;
+  margin: 60px auto 0px auto;
+  /* TEST */
+  /* border: solid red; */
 }
 
 .section-title > h1 > br {
@@ -683,6 +700,8 @@ form > button {
 */
 
 #main-activity {
+  margin-bottom: 60px;
+
   /* TEST */
   /* border: solid 2px rgb(255, 47, 0); */
 }
@@ -697,23 +716,23 @@ form > button {
 .img-activity {
   width: 302px;
   height: 445px;
-  /* White */
-  border: 5px solid var(--color-02);
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
   object-fit: cover;
-  /* TEST */
-  /* border: solid 3px rgb(255, 234, 0); */
 }
 
 .card-activity > div {
   height: 56px;
   width: 302px;
-  margin-left: 19px;
-  /* TEST *
-  /* border: solid 3px rgb(255, 234, 0); */
+}
+
+.card-activity > div > h3 {
+  /* Titre h3 des cartes : Activités à Marseille */
+  margin-left: 20px;
+  margin-top: 15px;
 }
 
 .portrait-img {
+  /* image Fort de Pomègues : contrainte en hauteur */
   height: 396px;
 }
 
@@ -770,3 +789,25 @@ form > button {
     width: 106px;
   }
 } /* fin @media queries tablette */
+
+/*
+/////////////////////////////////////////////////////////
+///////////////////////// FOOTER ////////////////////////
+/////////////////////////////////////////////////////////
+*/
+
+footer {
+  height: 225px;
+  background-color: var(--color-05-sha);
+  /* TEST */
+  /* border: solid 2px rgb(0, 255, 238); */
+}
+
+footer > section {
+  width: 1340px;
+}
+
+footer > section > div {
+  width: 280px;
+  line-height: 30px;
+}
