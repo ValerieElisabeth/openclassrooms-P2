@@ -105,7 +105,7 @@ button {
 
 .container-01 {
   max-width: 93%;
-  margin: 0px auto;
+  margin: auto;
   /*
   MARGES
   HautBas = 0px.
@@ -130,6 +130,11 @@ button {
   HautBas = 25px.
   DroiteGauche = auto.
   */
+}
+
+.container-04 {
+  max-width: 100%;
+  margin: 0px;
 }
 
 /*
@@ -432,10 +437,8 @@ form > button {
 */
 
 /* section : background hébergement à Marseille */
-
 #main-apartment {
   background-color: var(--color-05-sha);
-  width: 920px;
   border-radius: 20px;
 
   /* Met un espace à l'intérieur de ma section à droite et à gauche */
@@ -448,8 +451,7 @@ form > button {
   width: 246px;
   height: 199px;
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
+
   background-color: var(--color-02);
 }
 
@@ -462,9 +464,6 @@ form > button {
 
 .card-apartment > div {
   margin-left: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 
 /* carte des hébergements */
@@ -501,11 +500,11 @@ form > button {
 /* aside : background Les plus populaires */
 #main-aside {
   background-color: var(--color-05-sha);
-  width: 420px;
   border-radius: 20px;
   /* Marge et padding bloc "les plus populaires" */
   margin-left: 35px;
-  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 /* Bloc titre : les plus populaires */
@@ -517,13 +516,14 @@ form > button {
 /* carte aside : les plus populaires */
 .card-aside {
   height: 144px;
-  width: 343px;
   border-radius: 20px;
 
   /* marges droite et gauche des cartes aside */
-  margin-right: 15px;
-  margin-left: 15px;
+  margin-right: 8px;
+  margin-left: 8px;
   background-color: var(--color-02);
+  /* TEST */
+  /* border: solid 1px rgb(255, 179, 0); */
 }
 
 .img-aside {
@@ -531,9 +531,9 @@ form > button {
   width: 137px;
   /* White */
   border-radius: 20px 0px 0px 20px;
-  object-fit: cover;
-  /* TEST */
+  /*Bordure blanche autour de l'image */
   border: 5px solid var(--color-02);
+  object-fit: cover;
 }
 
 .card-aside > div {
@@ -541,8 +541,6 @@ form > button {
   padding-bottom: 12px;
   margin-right: 8px;
   margin-left: 15px;
-  /* TEST */
-  /* border: solid 3px rgb(225, 255, 0); */
 }
 
 /*
@@ -634,6 +632,10 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
 
 @media screen and (max-width: 992px) {
   /* Si l'écran est inférieur ou égal à : 992px */
+  .container-01,
+  .container-02 {
+    max-width: 90%;
+  }
 
   /* ---------------------------------------------------- */
   /* ------- Header : Section logo & nav Tablette ------- */
@@ -666,7 +668,6 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
 
   #main-aside {
     height: 278px;
-    width: 920px;
     /* padding bloc "les plus populaires" */
     margin-left: 0px;
     margin-top: 40px;
@@ -678,7 +679,6 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
   }
 
   main > section {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -771,11 +771,11 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
 } /* fin @media queries tablette */
 
 /*
---------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
 o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o 
--------------------------------------------------------------- 
+------------------------------------------------------------------------------------------------- 
                             HEADER
---------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
 */
 
 @media screen and (max-width: 768px) {
@@ -787,10 +787,6 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
 
   header {
     background-color: rgb(255, 240, 206);
-  }
-
-  .container-01 {
-    max-width: 88%;
   }
 
   .section-logo-nav {
@@ -893,5 +889,122 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
 
   .section-info > p > br {
     display: inline;
+  }
+
+  /*
+  ------------------------------------------------------------
+  o o o o o o o o o o o  VERSION MOBILE o o o o o o o o o o 
+  ------------------------------------------------------------ 
+                              MAIN
+  ------------------------------------------------------------
+  */
+
+  .container-02 {
+    max-width: 100%;
+  }
+
+  /* Place le bloc les plus populaires au dessus,
+   d'Hébergement à Marseille */
+  .fd-cr {
+    flex-direction: column-reverse;
+  }
+
+  /* ------------------------------------------------------- */
+  /* -------- Main : Les plus polulaires Mobile ---------- */
+  /* ------------------------------------------------------- */
+
+  #main-aside {
+    /* Bloc : les plus populaires */
+    border-radius: 0px;
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+  }
+
+  h2 {
+    /* Bloc titre : les plus populaires */
+    margin-top: 30px;
+  }
+
+  #main-aside > div {
+    /* Bloc titre div : les plus populaires */
+    width: 340px;
+  }
+
+  article {
+    flex-direction: column;
+  }
+
+  /* carte aside : les plus populaires */
+  .card-aside {
+    width: 334px;
+    /* TEST */
+    /* border: solid 1px rgb(255, 179, 0); */
+  }
+
+  .img-aside {
+    width: 137px;
+  }
+
+  /* ------------------------------------------------------- */
+  /* -------- Main : Hébergement à Marseille Mobile ---------- */
+  /* ------------------------------------------------------- */
+
+  #main-apartment {
+    /* section : background hébergement à Marseille */
+    background-color: var(--color-02);
+  }
+
+  .card-apartment {
+    /* Largeur des cartes hébergements */
+    width: 335px;
+    margin-bottom: 18px;
+  }
+
+  .mb {
+    /* Met un espace sous certaines cartes */
+    margin-bottom: 18px;
+  }
+
+  .card-apartment > div {
+    margin-left: 15px;
+  }
+
+  .img-apartment {
+    width: 335px;
+  }
+
+  #main-apartment > h2 {
+    margin-left: 0px;
+  }
+
+  #main-apartment > button {
+    display: none;
+  }
+
+  /* ---------------------------------------------------- */
+  /* ------ Main : Activités à Marseille Mobile ------- */
+  /* ---------------------------------------------------- */
+  #main-activity > section {
+    flex-direction: column;
+    align-items: center;
+  }
+  /*
+  ------------------------------------------------------------
+  o o o o o o o o o o o  VERSION MOBILE o o o o o o o o o o 
+  ------------------------------------------------------------ 
+                              FOOTER
+  ------------------------------------------------------------
+  */
+
+  #footer {
+    max-width: 100%;
+    height: 500px;
+  }
+
+  footer > section {
+    flex-direction: column;
+    margin: 40px;
+    height: 450px;
   }
 } /* fin @media queries mobile */
