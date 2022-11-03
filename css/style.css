@@ -16,7 +16,7 @@ html {
   max-width: 1440px; /* Largeur max du site */
   margin: auto; /* A pour effet de centrer le site dans la page du navigateur */
   /* TEST */
-  border: solid 2px rgb(17, 255, 0);
+  /* border: solid 2px rgb(228, 232, 228); */
 }
 
 body {
@@ -296,7 +296,7 @@ form > button {
 .filters > ul {
   height: 50px;
   border-radius: 25px;
-  margin-left: 40px;
+  margin-left: 30px;
   margin-right: 10px;
   border: solid 2px var(--color-05);
 }
@@ -399,6 +399,7 @@ form > button {
 .b-shadow {
   box-shadow: 5px 5px 10px var(--color-01-sha);
 }
+
 /*
 /////////////////////////////////////////////////////////
 ////////// MAIN //// Hébergement à Marseille ////////////
@@ -420,7 +421,6 @@ form > button {
   width: 246px;
   height: 199px;
   border-radius: 20px;
-
   background-color: var(--color-02);
 }
 
@@ -529,6 +529,7 @@ form > button {
   height: 445px;
   border-radius: 20px;
 }
+
 .img-activity {
   /* Images des cartes */
   width: 302px;
@@ -630,10 +631,8 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
   /* -------- Main : Les plus polulaires Tablette ---------- */
   /* ------------------------------------------------------- */
 
-  /* TEST */
-  /* border: solid 1px rgb(255, 179, 0); */
-
   #main-aside {
+    width: 100%;
     /* padding bloc "les plus populaires" */
     margin-left: 0px;
     margin-top: 40px;
@@ -642,7 +641,7 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
 
   #main-aside > div {
     /* Bloc TITRE : les plus populaires */
-    width: 98%;
+    width: 95%;
   }
 
   main > section {
@@ -823,6 +822,7 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   }
 
   .filters > section {
+    width: 100%;
     /* Section qui englobe les 4 boutons des filtres */
     justify-content: space-between;
   }
@@ -886,11 +886,8 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   }
 
   /* ------------------------------------------------------- */
-  /* -------- Main : Les plus polulaires Mobile ---------- */
+  /* -------- Main : Les plus polulaires Mobile ------------ */
   /* ------------------------------------------------------- */
-
-  /* TEST */
-  /* border: solid 1px rgb(255, 179, 0); */
 
   #main-aside {
     /* Bloc : les plus populaires */
@@ -899,6 +896,8 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
     height: auto;
     margin-top: 0px;
     padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   h2 {
@@ -906,26 +905,31 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
     margin-top: 30px;
   }
 
-  #main-aside > div {
-    /* Bloc titre div : les plus populaires */
-    width: 340px;
+  article {
+    width: 100%;
+    flex-direction: column;
   }
 
-  article {
-    flex-direction: column;
+  article > div > div {
+    width: 140%;
   }
 
   .card-aside {
     /* carte aside : les plus populaires */
-    width: 334px;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .card-aside > div {
+    margin-left: 10px;
   }
 
   .img-aside {
-    width: 137px;
+    width: 100%;
   }
 
   /* ------------------------------------------------------- */
-  /* -------- Main : Hébergement à Marseille Mobile ---------- */
+  /* -------- Main : Hébergement à Marseille Mobile -------- */
   /* ------------------------------------------------------- */
 
   #main-apartment {
@@ -935,8 +939,8 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
 
   .card-apartment {
     /* Largeur des cartes hébergements */
-    width: 335px;
-    margin-bottom: 18px;
+    width: 100%;
+    margin-bottom: 25px;
   }
 
   .mb {
@@ -949,7 +953,8 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   }
 
   .img-apartment {
-    width: 335px;
+    width: 100%;
+    object-position: 70% 70%;
   }
 
   #main-apartment > h2 {
@@ -977,29 +982,34 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   #main-activity > h2 {
     margin-left: 30px;
     width: 150px;
+    margin-bottom: 10px;
   }
 
   #main-activity > section {
     flex-direction: column;
     align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .card-activity {
     /* carte : activités */
     width: 335px;
-    height: 200px;
-    margin-bottom: 18px;
+    height: 190px;
+    margin-bottom: 25px;
+    width: 100%;
   }
 
-  /* Images des cartes */
   .img-activity {
-    width: 335px;
-    height: 142px;
+    /* Images des cartes */
+    height: 134px;
+    width: 100%;
   }
 
   .card-activity > div {
     /* div : qui contient le h3 */
     width: 302px;
+    margin-top: 10px;
   }
 
   .card-activity > div > h3 > br {
@@ -1022,6 +1032,6 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   footer > section {
     flex-direction: column;
     margin: 40px;
-    height: 450px;
+    height: 460px;
   }
 } /* fin @media queries mobile */

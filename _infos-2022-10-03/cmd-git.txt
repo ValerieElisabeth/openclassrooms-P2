@@ -311,5 +311,7 @@ Nous voulons apporter les évolutions de la branche “branche numéro 1” dans
         |   3)   git commit -m "          | Donner un nom à son commit.         |
         |   4)   git push origin          | Pousser notre commit sur GitHub.    |
         /////////////////////////////////////////////////////////////////////////
+        Modifier le message d'un commit non push
+        git commit --amand -m "Tapez votre (NOUVEAU NOM) de message"
 
 ///////////////////////////////////////////////////////////////////////////////////////
