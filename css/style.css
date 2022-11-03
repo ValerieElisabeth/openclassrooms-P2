@@ -167,14 +167,6 @@ button {
   align-items: stretch;
 }
 
-.ai-fe {
-  align-items: flex-end;
-}
-
-.ai-fs {
-  align-items: flex-start;
-}
-
 .jc-c {
   justify-content: center;
 }
@@ -183,32 +175,8 @@ button {
   justify-content: space-around;
 }
 
-.jc-fe {
-  justify-content: flex-end;
-}
-
-.jc-fs {
-  justify-content: flex-start;
-}
-
 .jc-sb {
   justify-content: space-between;
-}
-
-.ac-sb {
-  align-content: space-between;
-}
-
-.ac-c {
-  align-content: center;
-}
-
-.ac-sa {
-  align-content: space-around;
-}
-
-.ac-fe {
-  align-content: flex-end;
 }
 
 /*
@@ -248,12 +216,13 @@ nav > ul > li {
 /* ------ Section Titre & baseline -------------------- */
 /* ---------------------------------------------------- */
 
+/* TEST */
+/* border: solid red; */
+
 .section-title > h1 {
   font-size: 22px;
   font-weight: 700;
   margin: 60px auto 0px auto;
-  /* TEST */
-  /* border: solid red; */
 }
 
 .section-title > h1 > br {
@@ -309,8 +278,8 @@ form > button {
   width: 132px;
 }
 
-/* Cache la loupe */
 .search-icon-mobile {
+  /* Cache la loupe */
   visibility: hidden;
 }
 
@@ -332,8 +301,8 @@ form > button {
   border: solid 2px var(--color-05);
 }
 
-/* Les icônes */
 .filters > ul > i {
+  /* Les icônes */
   margin-left: 20px;
   margin-right: 10px;
   color: var(--color-03);
@@ -341,8 +310,8 @@ form > button {
   font-size: 22px;
 }
 
-/* Marges autour des textes */
 .filters > ul > li {
+  /* Marges autour des textes */
   margin-right: 20px;
 }
 
@@ -350,8 +319,8 @@ form > button {
   background-color: var(--color-04);
 }
 
-/* Ombre sous le bouton : Économique */
 .filters > ul.b-shadow-filters {
+  /* Ombre sous le bouton : Économique */
   box-shadow: none;
 }
 
@@ -376,8 +345,8 @@ form > button {
   margin-left: 10px;
 }
 
-/* Empèche le retour à la ligne */
 .section-info > p > br {
+  /* Empèche le retour à la ligne */
   display: none;
 }
 
@@ -410,6 +379,7 @@ form > button {
   font-weight: 700;
   font-size: 16px;
 }
+
 .card-p {
   /* Font */
   font-size: 14px;
@@ -422,7 +392,6 @@ form > button {
 .card-p > strong {
   font-size: 14px;
   font-weight: 600;
-  /* color: violet; */
 }
 
 /* ------ Ombre des cartes ---------------------------- */
@@ -436,12 +405,12 @@ form > button {
 /////////////////////////////////////////////////////////
 */
 
-/* section : background hébergement à Marseille */
 #main-apartment {
+  /* section : background hébergement à Marseille */
   background-color: var(--color-05-sha);
   border-radius: 20px;
-
-  /* Met un espace à l'intérieur de ma section à droite et à gauche */
+  /* Met un espace à l'intérieur de ma section
+  à droite et à gauche */
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -458,22 +427,18 @@ form > button {
 .mb {
   /* Met un espace sous certaines cartes */
   margin-bottom: 35px;
-  /* TEST */
-  /* border: solid 1px rgb(255, 238, 0); */
 }
 
 .card-apartment > div {
   margin-left: 15px;
 }
 
-/* carte des hébergements */
-
 .img-apartment {
+  /* Images des hébergements */
   width: 246px;
   height: 124px;
   object-fit: cover;
-
-  /* White */
+  /* Contour Blanc autour des images */
   border: 5px solid var(--color-02);
   border-radius: 20px 20px 0px 0px;
 }
@@ -497,33 +462,30 @@ form > button {
 /////////////////////////////////////////////////////////
 */
 
-/* aside : background Les plus populaires */
 #main-aside {
+  /* aside : background Les plus populaires */
   background-color: var(--color-05-sha);
   border-radius: 20px;
   /* Marge et padding bloc "les plus populaires" */
   margin-left: 35px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-/* Bloc titre : les plus populaires */
 #main-aside > div {
+  /* Bloc titre : les plus populaires */
   width: 330px;
   color: var(--color-03);
 }
 
-/* carte aside : les plus populaires */
 .card-aside {
+  /* carte aside : les plus populaires */
   height: 144px;
   border-radius: 20px;
-
   /* marges droite et gauche des cartes aside */
   margin-right: 8px;
   margin-left: 8px;
   background-color: var(--color-02);
-  /* TEST */
-  /* border: solid 1px rgb(255, 179, 0); */
 }
 
 .img-aside {
@@ -549,6 +511,9 @@ form > button {
 /////////////////////////////////////////////////////////
 */
 
+/* TEST */
+/* background-color: rgb(233, 230, 230); */
+
 #main-activity {
   /*
   Marges au dessus et au dessous
@@ -556,31 +521,29 @@ form > button {
   */
   margin-top: 70px;
   margin-bottom: 60px;
-  /* TEST */
-  /* background-color: rgb(233, 230, 230); */
 }
 
-/* carte : activités */
 .card-activity {
+  /* carte : activités */
   width: 302px;
   height: 445px;
   border-radius: 20px;
 }
-/* Images des cartes */
 .img-activity {
+  /* Images des cartes */
   width: 302px;
   height: 445px;
   border-radius: 20px 20px 0px 0px;
   object-fit: cover;
 }
 
-/* Image Fort de Pomègues : personnalisée en hauteur */
 .portrait-img {
+  /* Image Fort de Pomègues : personnalisée en hauteur */
   height: 396px;
 }
 
-/* div : qui contient le h3 */
 .card-activity > div {
+  /* div : qui contient le h3 */
   width: 302px;
   height: 56px;
 }
@@ -591,8 +554,8 @@ form > button {
   margin-top: 15px;
 }
 
-/* Empèche le retour à la ligne */
 .card-activity > div > h3 > br {
+  /* Empèche le retour à la ligne */
   display: none;
 }
 
@@ -601,12 +564,12 @@ form > button {
 ///////////////////////// FOOTER ////////////////////////
 /////////////////////////////////////////////////////////
 */
+/* TEST */
+/* border: solid 2px rgb(0, 255, 238); */
 
 footer {
   height: 225px;
   background-color: var(--color-05-sha);
-  /* TEST */
-  /* border: solid 2px rgb(0, 255, 238); */
 }
 
 footer > section {
@@ -632,6 +595,7 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
 
 @media screen and (max-width: 992px) {
   /* Si l'écran est inférieur ou égal à : 992px */
+
   .container-01,
   .container-02 {
     max-width: 90%;
@@ -666,16 +630,19 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
   /* -------- Main : Les plus polulaires Tablette ---------- */
   /* ------------------------------------------------------- */
 
+  /* TEST */
+  /* border: solid 1px rgb(255, 179, 0); */
+
   #main-aside {
-    height: 278px;
     /* padding bloc "les plus populaires" */
     margin-left: 0px;
     margin-top: 40px;
+    padding-bottom: 20px;
   }
 
-  /* Bloc titre : les plus populaires */
   #main-aside > div {
-    width: 800px;
+    /* Bloc TITRE : les plus populaires */
+    width: 98%;
   }
 
   main > section {
@@ -683,8 +650,8 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
     align-items: center;
   }
 
-  /* carte aside : les plus populaires */
   .card-aside {
+    /* carte aside : les plus populaires */
     width: 252px;
   }
 
@@ -697,8 +664,8 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
     margin-right: 8px;
   }
 
-  /* Interlettrage spécifique plus resserré */
   .card-p-letter-spacing {
+    /* Interlettrage spécifique plus resserré */
     letter-spacing: -0.5px;
   }
 
@@ -710,34 +677,38 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
   /* ------ Main : Activités à Marseille Tablette ------- */
   /* ---------------------------------------------------- */
 
+  /* TEST */
+  /* background-color: rgb(233, 230, 230); */
+
   #main-activity {
     display: flex;
     align-items: stretch;
     margin-top: 20px;
-    /* TEST */
-    /* background-color: rgb(233, 230, 230); */
   }
 
-  /* carte : activités */
   .card-activity {
+    /* carte : activités */
     width: 182px;
     height: 267px;
   }
 
-  /* carte : images */
   .img-activity {
+    /* carte : images */
     width: 182px;
     height: 212px;
   }
 
-  /* image Fort de Pomègues : contrainte en hauteur
-  images N°2 hauteur personnalisée */
   .portrait-img {
+    /*
+    image Fort de Pomègues :
+    contrainte en hauteur
+    images N°2 hauteur personnalisée
+    */
     height: 212px;
   }
 
-  /* div : qui contient le h3 */
   .card-activity > div {
+    /* div : qui contient le h3 */
     width: 182px;
   }
 
@@ -746,8 +717,8 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
     margin-top: 8px;
   }
 
-  /* Rétablie le retour à la ligne */
   .card-activity > div > h3 > br {
+    /* Rétablie le retour à la ligne */
     display: inline;
   }
 
@@ -759,14 +730,15 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
   ------------------------------------------------------------
   */
 
+  /* TEST */
+  /* border: solid 1px red; */
+
   footer > section {
     width: 880px;
   }
 
   footer > section > div {
     width: 200px;
-    /* TEST */
-    /* border: solid 1px red; */
   }
 } /* fin @media queries tablette */
 
@@ -786,7 +758,7 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   /* ------------------------------------------------------ */
 
   header {
-    background-color: rgb(255, 240, 206);
+    /* background-color: rgb(255, 240, 206); */
   }
 
   .section-logo-nav {
@@ -816,8 +788,8 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
     margin-top: 40px;
   }
 
-  /* Rétablie le retour à la ligne */
   .section-title > h1 > br {
+    /* Rétablie le retour à la ligne */
     display: inline;
   }
 
@@ -849,6 +821,7 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   .filters * {
     font-size: 11px;
   }
+
   .filters > section {
     /* Section qui englobe les 4 boutons des filtres */
     justify-content: space-between;
@@ -864,22 +837,23 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
     margin: 8px 0px;
   }
 
-  /* Les icônes */
   .filters > ul > i {
+    /* Les icônes */
     margin-left: 15px;
     font-size: 20px;
   }
 
-  /* Marges autour des textes */
   .filters > ul > li {
+    /* Marges autour des textes */
     margin-right: 10px;
   }
 
   .filters-bg-color {
     background-color: transparent;
   }
-  /* Ombre sous le bouton : Économique */
+
   .filters > ul.b-shadow-filters {
+    /* Ombre sous le bouton : Économique */
     box-shadow: 2px 2px 2px var(--color-05);
   }
 
@@ -903,9 +877,11 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
     max-width: 100%;
   }
 
-  /* Place le bloc les plus populaires au dessus,
-   d'Hébergement à Marseille */
   .fd-cr {
+    /*
+    Place le bloc les plus populaires au dessus,
+    d'Hébergement à Marseille
+    */
     flex-direction: column-reverse;
   }
 
@@ -913,12 +889,16 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   /* -------- Main : Les plus polulaires Mobile ---------- */
   /* ------------------------------------------------------- */
 
+  /* TEST */
+  /* border: solid 1px rgb(255, 179, 0); */
+
   #main-aside {
     /* Bloc : les plus populaires */
     border-radius: 0px;
     width: 100%;
     height: auto;
     margin-top: 0px;
+    padding-bottom: 40px;
   }
 
   h2 {
@@ -935,11 +915,9 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
     flex-direction: column;
   }
 
-  /* carte aside : les plus populaires */
   .card-aside {
+    /* carte aside : les plus populaires */
     width: 334px;
-    /* TEST */
-    /* border: solid 1px rgb(255, 179, 0); */
   }
 
   .img-aside {
@@ -979,15 +957,54 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   }
 
   #main-apartment > button {
+    /* Supprime le bouton */
     display: none;
   }
 
   /* ---------------------------------------------------- */
-  /* ------ Main : Activités à Marseille Mobile ------- */
+  /* ------ Main : Activités à Marseille Mobile --------- */
   /* ---------------------------------------------------- */
+
+  #main-activity {
+    /*
+    Marges au dessus et au dessous
+    de la section Activités à Marseille
+    */
+    margin-top: 70px;
+    margin-bottom: 60px;
+  }
+
+  #main-activity > h2 {
+    margin-left: 30px;
+    width: 150px;
+  }
+
   #main-activity > section {
     flex-direction: column;
     align-items: center;
+  }
+
+  .card-activity {
+    /* carte : activités */
+    width: 335px;
+    height: 200px;
+    margin-bottom: 18px;
+  }
+
+  /* Images des cartes */
+  .img-activity {
+    width: 335px;
+    height: 142px;
+  }
+
+  .card-activity > div {
+    /* div : qui contient le h3 */
+    width: 302px;
+  }
+
+  .card-activity > div > h3 > br {
+    /* Empèche le retour à la ligne */
+    display: none;
   }
   /*
   ------------------------------------------------------------
