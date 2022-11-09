@@ -23,6 +23,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif;
+  color: var(--color-01);
 }
 
 /*
@@ -35,10 +36,13 @@ body {
   --color-01: black;
   --color-01-sha: rgba(0, 0, 0, 0.2);
   --color-02: white;
+
+  /* Bleu Booki */
   --color-03: #0065fc;
+  /* Version plus claire du bleu Booki */
   --color-04: #deebff;
-  --color-05: #d9d9d9;
-  --color-05-sha: rgba(217, 217, 217, 0.4);
+  /* Gris pour le fond */
+  --color-05: #f2f2f2;
 }
 
 /*
@@ -49,10 +53,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6,
 p {
-  color: var(--color-01);
   margin: 0;
   padding: 0;
 }
@@ -86,22 +87,18 @@ a:hover {
 a {
   margin: 0;
   padding: 0;
-  color: rgb(0, 204, 255);
+  color: var(--color-01);
 }
 
 button {
   border-style: none;
   background-color: transparent;
 }
-
 /*
 /////////////////////////////////////////////////////////
 ////////////////////// CONTAINERS ///////////////////////
 /////////////////////////////////////////////////////////
 */
-
-/* TEST */
-/* border: solid 2px rgb(0, 68, 255); */
 
 .container-01 {
   max-width: 93%;
@@ -198,9 +195,11 @@ button {
   font-size: 16px;
 }
 
-nav > ul > li {
+/* Liens Hébergement et Activités */
+nav > ul > li > a {
   width: 162px;
   padding-top: 35px;
+  cursor: default;
 }
 
 .right {
@@ -244,8 +243,8 @@ form > div {
   width: 50px;
   height: 49px;
   border-radius: 15px 0px 0px 15px;
-  background-color: var(--color-05-sha);
-  border: solid 1px var(--color-05-sha);
+  background-color: var(--color-05);
+  border: solid 1px var(--color-05);
   /* Font */
   font-size: 20px;
 }
@@ -254,13 +253,15 @@ input {
   width: 230px;
   height: 49px;
   padding-left: 16px;
-  border: solid 1px var(--color-05-sha);
+  border: solid 1px var(--color-05);
   /* Font */
   font-size: 18px;
   font-weight: 700;
 }
 
 input::placeholder {
+  /* Permet de cibler le pseudo-element placeholder dans l'input texte */
+  color: var(--color-01);
   opacity: 1;
 }
 
@@ -301,21 +302,26 @@ form > button {
   border: solid 2px var(--color-05);
 }
 
-.filters > ul > i {
+.filters > ul > li {
+  cursor: default;
+}
+
+.filters > ul > li > i {
   /* Les icônes */
   margin-left: 20px;
   margin-right: 10px;
   color: var(--color-03);
   /* Font */
   font-size: 22px;
+  cursor: default;
 }
 
-.filters > ul > li {
+.filters-text {
   /* Marges autour des textes */
   margin-right: 20px;
 }
 
-.filters-bg-color {
+.filters-bg-color:hover {
   background-color: var(--color-04);
 }
 
@@ -408,7 +414,7 @@ form > button {
 
 #main-apartment {
   /* section : background hébergement à Marseille */
-  background-color: var(--color-05-sha);
+  background-color: var(--color-05);
   border-radius: 20px;
   /* Met un espace à l'intérieur de ma section
   à droite et à gauche */
@@ -464,7 +470,7 @@ form > button {
 
 #main-aside {
   /* aside : background Les plus populaires */
-  background-color: var(--color-05-sha);
+  background-color: var(--color-05);
   border-radius: 20px;
   /* Marge et padding bloc "les plus populaires" */
   margin-left: 35px;
@@ -475,6 +481,10 @@ form > button {
 #main-aside > div {
   /* Bloc titre : les plus populaires */
   width: 330px;
+}
+
+#main-aside > div > i {
+  /* Icône du bloc titre : les plus populaires */
   color: var(--color-03);
 }
 
@@ -511,15 +521,12 @@ form > button {
 /////////////////////////////////////////////////////////
 */
 
-/* TEST */
-/* background-color: rgb(233, 230, 230); */
-
 #main-activity {
   /*
   Marges au dessus et au dessous
   de la section Activités à Marseille
   */
-  margin-top: 70px;
+  padding-top: 15px;
   margin-bottom: 60px;
 }
 
@@ -570,7 +577,7 @@ form > button {
 
 footer {
   height: 225px;
-  background-color: var(--color-05-sha);
+  background-color: var(--color-05);
 }
 
 footer > section {

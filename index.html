@@ -9,7 +9,7 @@
     <title>Booki</title>
 
     <!-- FAVICON ------------------------------------------------>
-    <link rel="icon" href="" />
+    <link rel="icon" href="#" />
 
     <!-- LIEN VERS MON FCHIER CSS ------------------------------->
     <link rel="stylesheet" href="/css/style.css" />
@@ -46,8 +46,14 @@
         <img src="/images/logo/Booki.png" alt="logo-site-booki" />
         <nav>
           <ul class="d-flex">
-            <li class="right d-flex jc-c">Hébergements</li>
-            <li class="left d-flex jc-c">Activités</li>
+            <li>
+              <a class="right d-flex jc-c" href="#main-apartment"
+                >hébergement</a
+              >
+            </li>
+            <li>
+              <a class="left d-flex jc-c" href="#main-activity">Activités</a>
+            </li>
           </ul>
         </nav>
       </section>
@@ -68,7 +74,7 @@
       <!--------------- Section rechercher --------------------------->
       <!-------------------------------------------------------------->
 
-      <form class="section-search d-flex container-03" action="">
+      <form class="section-search d-flex container-03" action="#">
         <div class="d-flex ai-c jc-c">
           <i class="fa-sharp fa-solid fa-location-dot"></i>
         </div>
@@ -86,21 +92,21 @@
       <section class="d-flex ai-c filters container-03">
         <p>Filtres</p>
         <section class="d-flex filters">
-          <ul class="d-flex ai-c b-shadow-filters">
-            <i class="fa-sharp fa-solid fa-ticket"></i>
-            <li>Économique</li>
-          </ul>
-          <ul class="d-flex ai-c">
-            <i class="fa-sharp fa-solid fa-person"></i>
-            <li>Familial</li>
-          </ul>
-          <ul class="d-flex ai-c">
-            <i class="fa-sharp fa-solid fa-heart"></i>
-            <li>Romantique</li>
+          <ul class="d-flex ai-c b-shadow-filters filters-bg-color">
+            <li><i class="fas fa-money-bill-wave"></i></li>
+            <li class="filters-text">Économique</li>
           </ul>
           <ul class="d-flex ai-c filters-bg-color">
-            <i class="fa-solid fa-dog"></i>
-            <li>Animaux autorisés</li>
+            <li><i class="fa-sharp fa-solid fa-person"></i></li>
+            <li class="filters-text">Familial</li>
+          </ul>
+          <ul class="d-flex ai-c filters-bg-color">
+            <li><i class="fa-sharp fa-solid fa-heart"></i></li>
+            <li class="filters-text">Romantique</li>
+          </ul>
+          <ul class="d-flex ai-c filters-bg-color">
+            <li><i class="fa-solid fa-dog"></i></li>
+            <li class="filters-text">Animaux autorisés</li>
           </ul>
         </section>
       </section>
@@ -134,7 +140,7 @@
               <img
                 class="img-apartment"
                 src="/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
-                alt="#"
+                alt="Photographie d'une chambre avec un lit superposé de l'Auberge : La Canebière à Marseille"
               />
               <div>
                 <h3 class="card-title">Auberge La Canebière</h3>
@@ -153,7 +159,7 @@
               <img
                 class="img-apartment"
                 src="/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
-                alt="#"
+                alt="Photographie d'une chambre de l'Hôtel du Port à Marseille"
               />
               <div>
                 <h3 class="card-title">Hôtel du port</h3>
@@ -173,7 +179,7 @@
               <img
                 class="img-apartment"
                 src="/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
-                alt=""
+                alt="Photographie d'une chambre de l'Hôtel : Les Mouettes à Marseille"
               />
               <div>
                 <h3 class="card-title">Hôtel Les mouettes</h3>
@@ -193,7 +199,7 @@
               <img
                 class="img-apartment"
                 src="/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
-                alt="#"
+                alt="Photographie d'une chambre de l'Hôtel de la mer à Marseille"
               />
               <div>
                 <h3 class="card-title">Hôtel de la mer</h3>
@@ -212,7 +218,7 @@
               <img
                 class="img-apartment"
                 src="/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
-                alt=""
+                alt="Photographie d'une chambre à l'Auberge : Le Panier à Marseille"
               />
               <div>
                 <h3 class="card-title">Auberge Le Panier</h3>
@@ -231,7 +237,7 @@
               <img
                 class="img-apartment"
                 src="/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
-                alt="#"
+                alt="Photographie d'une chambre de l'Hôtel chez Amina à Marseille"
               />
               <div>
                 <h3 class="card-title">Hôtel Chez Amina</h3>
@@ -265,7 +271,7 @@
               <img
                 class="img-aside"
                 src="/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
-                alt="#"
+                alt="Photographie d'une chambre de l'Hôtel : Le Soleil du matin à Marseille"
               />
               <div class="d-flex fd-c jc-sb">
                 <div>
@@ -287,7 +293,7 @@
               <img
                 class="img-aside"
                 src="/images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
-                alt="#"
+                alt="Photographie d'une chambre d'hôte appelée : Au cœur de l'eau, à Marseille"
               />
               <div class="d-flex fd-c jc-sb">
                 <div>
@@ -309,7 +315,7 @@
               <img
                 class="img-aside"
                 src="/images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
-                alt="#"
+                alt="Photographie d'une chambre de l'Hôtel Bleu et Blanc à Marseille"
               />
               <div class="d-flex fd-c jc-sb">
                 <div>
@@ -342,7 +348,7 @@
             <img
               class="img-activity"
               src="/images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
-              alt=""
+              alt="Photographie du Vieux port de Marseille"
             />
             <div>
               <h3 class="card-title">Vieux-Port</h3>
@@ -353,7 +359,7 @@
             <img
               class="img-activity portrait-img"
               src="/images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
-              alt="#"
+              alt="Photographie du Fort de Pomégues à Marseille"
             />
             <div>
               <h3 class="card-title">Fort de Pomègues</h3>
@@ -364,7 +370,7 @@
             <img
               class="img-activity"
               src="/images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
-              alt="#"
+              alt="Photographie du Parc national des Calanques de Marseille"
             />
             <div>
               <h3 class="card-title">Parc national des Calanques</h3>
@@ -375,7 +381,7 @@
             <img
               class="img-activity"
               src="/images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-              alt="#"
+              alt="Photographie de l'église Notre Dame de la Garde de Marseille"
             />
             <div>
               <h3 class="card-title">Notre-Dame-<br />de-la-Garde</h3>
