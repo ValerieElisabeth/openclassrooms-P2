@@ -422,15 +422,17 @@ i {
   à droite et à gauche */
   padding-left: 25px;
   padding-right: 25px;
-
 }
 
 .card-apartment {
   /* carte des hébergements */
   width: 246px;
+  /* width: 100%; */
   height: 199px;
   border-radius: 20px;
   background-color: var(--color-02);
+  /* TEST */
+  border: solid 2px rgb(0, 255, 238);
 }
 
 .mb {
@@ -445,11 +447,14 @@ i {
 .img-apartment {
   /* Images des hébergements */
   width: 246px;
+  /* width: 100%; */
   height: 124px;
   object-fit: cover;
   /* Contour Blanc autour des images */
   border: 5px solid var(--color-02);
   border-radius: 20px 20px 0px 0px;
+  /* TEST */
+  border: solid 2px rgb(255, 38, 0);
 }
 
 #main-apartment > h2 {
@@ -473,6 +478,7 @@ i {
 
 #main-aside {
   /* aside : background Les plus populaires */
+  width: 100%;
   background-color: var(--color-05);
   border-radius: 20px;
   /* Marge et padding bloc "les plus populaires" */
@@ -483,7 +489,7 @@ i {
 
 #main-aside > div {
   /* Bloc titre : les plus populaires */
-  width: 330px;
+  width: 100%;
 }
 
 #main-aside > div > i {
@@ -491,19 +497,21 @@ i {
   font-size: 18px;
 }
 
+article {
+  width: 100%;
+}
+
 .card-aside {
   /* carte aside : les plus populaires */
+  width: 100%;
   height: 144px;
   border-radius: 20px;
-  /* marges droite et gauche des cartes aside */
-  margin-right: 8px;
-  margin-left: 8px;
   background-color: var(--color-02);
 }
 
 .img-aside {
+  width: 100%;
   height: 144px;
-  width: 137px;
   /* White */
   border-radius: 20px 0px 0px 20px;
   /*Bordure blanche autour de l'image */
@@ -512,9 +520,10 @@ i {
 }
 
 .card-aside > div {
+  width: 100%;
   padding-top: 16px;
   padding-bottom: 12px;
-  margin-right: 8px;
+  margin-right: 10px;
   margin-left: 15px;
 }
 
@@ -645,16 +654,10 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
   #main-aside {
-    width: 100%;
     /* padding bloc "les plus populaires" */
     margin-left: 0px;
     margin-top: 40px;
     padding-bottom: 20px;
-  }
-
-  #main-aside > div {
-    /* Bloc TITRE : les plus populaires */
-    width: 95%;
   }
 
   main > section {
@@ -662,13 +665,12 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
     align-items: center;
   }
 
-  .card-aside {
-    /* carte aside : les plus populaires */
-    width: 252px;
-  }
-
   article {
     display: flex;
+  }
+
+  .card-aside {
+    height: auto;
   }
 
   .card-aside > div {
@@ -676,13 +678,18 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
     margin-right: 8px;
   }
 
+  .img-aside {
+    width: 106px;
+    height: auto;
+  }
+
   .card-p-letter-spacing {
     /* Interlettrage spécifique plus resserré */
     letter-spacing: -0.5px;
   }
 
-  .img-aside {
-    width: 106px;
+  .mr2 {
+    margin-right: 20px;
   }
 
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
@@ -773,10 +780,6 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
   /*          Header : section logo & nav Mobile          */
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
-
-  header {
-    /* background-color: rgb(255, 240, 206); */
-  }
 
   .section-logo-nav {
     margin-top: 20px;
@@ -1021,6 +1024,11 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
     height: 190px;
     margin-bottom: 25px;
     width: 100%;
+  }
+
+  .mr {
+    /* marge à droite des 3 premières cartes activités */
+    margin-right: 0px;
   }
 
   .img-activity {
