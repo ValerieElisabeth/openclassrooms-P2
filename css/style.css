@@ -597,6 +597,7 @@ footer {
 
 footer > section {
   width: 1340px;
+  padding-bottom: 40px;
 }
 
 footer > section > div {
@@ -832,6 +833,7 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
 
   .search-icon-mobile > i {
     color: var(--color-02);
+    font-size: 18px;
   }
 
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
@@ -919,8 +921,8 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
     border-radius: 0px;
     margin-top: 0px;
     padding-bottom: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   h2 {
@@ -929,7 +931,6 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   }
 
   article {
-    width: 100%;
     flex-direction: column;
   }
 
@@ -950,8 +951,8 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   .img-aside {
     /* images : les plus populaires contrainte en largeur obligatoire
     pour gérer ensembles les 2 img en paysage et la 3ème en portrait */
-    width: 137px;
-    height: auto;
+    width: 70%;
+    height: 144px;
   }
 
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
