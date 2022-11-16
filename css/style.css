@@ -422,6 +422,7 @@ i {
   à droite et à gauche */
   padding-left: 25px;
   padding-right: 25px;
+
 }
 
 .card-apartment {
@@ -534,14 +535,19 @@ i {
 
 .card-activity {
   /* carte : activités */
-  width: 302px;
   height: 445px;
+  width: 100%;
   border-radius: 20px;
+}
+
+.mr {
+  /* marge à droite des 3 premières cartes activités */
+  margin-right: 40px;
 }
 
 .img-activity {
   /* Images des cartes */
-  width: 302px;
+  width: 100%;
   height: 445px;
   border-radius: 20px 20px 0px 0px;
   object-fit: cover;
@@ -554,8 +560,8 @@ i {
 
 .card-activity > div {
   /* div : qui contient le h3 */
-  width: 302px;
-  height: 56px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 .card-activity > div > h3 {
@@ -574,8 +580,6 @@ i {
 ///////////////////////// FOOTER ////////////////////////
 /////////////////////////////////////////////////////////
 */
-/* TEST */
-/* border: solid 2px rgb(0, 255, 238); */
 
 footer {
   height: 225px;
@@ -696,14 +700,18 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
 
   .card-activity {
     /* carte : activités */
-    width: 182px;
+    width: 100%;
     height: 267px;
   }
 
   .img-activity {
     /* carte : images */
-    width: 182px;
     height: 212px;
+  }
+
+  .mr {
+    /* marge à droite des 3 premières cartes activités */
+    margin-right: 50px;
   }
 
   .portrait-img {
@@ -717,7 +725,8 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
 
   .card-activity > div {
     /* div : qui contient le h3 */
-    width: 182px;
+    width: auto;
+    padding-right: 8px;
   }
 
   .card-activity > div > h3 {
@@ -905,8 +914,6 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   #main-aside {
     /* Bloc : les plus populaires */
     border-radius: 0px;
-    width: 100%;
-    height: auto;
     margin-top: 0px;
     padding-bottom: 40px;
     padding-left: 20px;
@@ -924,7 +931,7 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   }
 
   article > div > div {
-    width: 140%;
+    width: 100%;
   }
 
   .card-aside {
@@ -938,7 +945,10 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   }
 
   .img-aside {
-    width: 100%;
+    /* images : les plus populaires contrainte en largeur obligatoire
+    pour gérer ensembles les 2 img en paysage et la 3ème en portrait */
+    width: 137px;
+    height: auto;
   }
 
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
