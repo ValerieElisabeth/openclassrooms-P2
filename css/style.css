@@ -202,21 +202,23 @@ nav > ul > li > a {
   cursor: default;
 }
 
+.left,
 .right {
+  border-top: solid 2px transparent;
+}
+
+.left:hover {
   border-top: solid 2px;
   color: var(--color-03);
 }
 
-.left {
-  border-top: solid 2px transparent;
+.right:hover {
+  border-top: solid 2px;
+  color: var(--color-03);
 }
-
 /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
 /* ------ Section Titre & baseline -------------------- */
 /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
-
-/* TEST */
-/* border: solid red; */
 
 .section-title > h1 {
   font-size: 22px;
@@ -292,8 +294,12 @@ form > button {
 /* ------ Section : Filter ---------------------------- */
 /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
+.filters > section {
+  width: 100%;
+}
+
 .filters * {
-  /* Font */
+  /* Polices */
   font-size: 17px;
   font-weight: 700;
 }
@@ -302,7 +308,8 @@ form > button {
   height: 50px;
   border-radius: 25px;
   margin-left: 30px;
-  margin-right: 10px;
+
+  /* margin-right: 10px; */
   border: solid 2px var(--color-05);
 }
 
@@ -416,6 +423,10 @@ i {
 
 #main-apartment {
   /* section : background hébergement à Marseille */
+
+  width: 68%;
+  /* Sur la largeur totale du site ce bloc prend : 70% */
+
   background-color: var(--color-05);
   border-radius: 20px;
   /* Met un espace à l'intérieur de ma section
@@ -424,37 +435,43 @@ i {
   padding-right: 25px;
 }
 
+#main-apartment > section > div {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
 .card-apartment {
   /* carte des hébergements */
-  width: 246px;
-  /* width: 100%; */
-  height: 199px;
+  width: 100%;
   border-radius: 20px;
   background-color: var(--color-02);
-  /* TEST */
-  border: solid 2px rgb(0, 255, 238);
+}
+
+.card-apartment > div {
+  width: 85%;
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.img-apartment {
+  /* Images des hébergements */
+  width: 100%;
+  height: 124px;
+
+  object-fit: cover;
+  /* Contour Blanc autour des images */
+  border: 5px solid var(--color-02);
+  border-radius: 20px 20px 0px 0px;
+}
+
+.mr1 {
+  margin-right: 30px;
 }
 
 .mb {
   /* Met un espace sous certaines cartes */
   margin-bottom: 35px;
-}
-
-.card-apartment > div {
-  margin-left: 15px;
-}
-
-.img-apartment {
-  /* Images des hébergements */
-  width: 246px;
-  /* width: 100%; */
-  height: 124px;
-  object-fit: cover;
-  /* Contour Blanc autour des images */
-  border: 5px solid var(--color-02);
-  border-radius: 20px 20px 0px 0px;
-  /* TEST */
-  border: solid 2px rgb(255, 38, 0);
 }
 
 #main-apartment > h2 {
@@ -478,7 +495,9 @@ i {
 
 #main-aside {
   /* aside : background Les plus populaires */
-  width: 100%;
+
+  /* Sur la largeur totale du site le bloc aside prend : 30% */
+  width: 32%;
   background-color: var(--color-05);
   border-radius: 20px;
   /* Marge et padding bloc "les plus populaires" */
@@ -511,16 +530,23 @@ article {
 
 .img-aside {
   width: 100%;
-  height: 144px;
+  height: 100%;
   /* White */
   border-radius: 20px 0px 0px 20px;
+  object-fit: cover;
   /*Bordure blanche autour de l'image */
   border: 5px solid var(--color-02);
-  object-fit: cover;
 }
 
 .card-aside > div {
   width: 100%;
+  height: 100%;
+  /* White */
+  border-radius: 20px 0px 0px 20px;
+}
+
+.card-aside > section {
+  width: 150%;
   padding-top: 16px;
   padding-bottom: 12px;
   margin-right: 10px;
@@ -544,8 +570,8 @@ article {
 
 .card-activity {
   /* carte : activités */
-  height: 445px;
   width: 100%;
+  height: 445px;
   border-radius: 20px;
 }
 
@@ -649,13 +675,22 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
                               MAIN
   ------------------------------------------------------------
   */
+  /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
+  /* ------ Main : Hébergement à Marseille Tablette ----- */
+  /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+  #main-apartment {
+    /* section : background h ébergement à Marseille */
+    width: 100%;
+  }
 
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
-  /* -------- Main : Les plus polulaires Tablette ---------- */
+  /* -------- Main : Les plus polulaires Tablette ------- */
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
   #main-aside {
     /* padding bloc "les plus populaires" */
+    width: 100%;
     margin-left: 0px;
     margin-top: 40px;
     padding-bottom: 20px;
@@ -670,18 +705,9 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
     display: flex;
   }
 
-  .card-aside {
-    height: auto;
-  }
-
-  .card-aside > div {
-    margin-left: 7px;
-    margin-right: 8px;
-  }
-
-  .img-aside {
-    width: 106px;
-    height: auto;
+  .card-aside > section {
+    margin-left: 2px;
+    margin-right: 5px;
   }
 
   .card-p-letter-spacing {
@@ -755,9 +781,6 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
   ------------------------------------------------------------
   */
 
-  /* TEST */
-  /* border: solid 1px red; */
-
   footer > section {
     width: 880px;
   }
@@ -786,6 +809,7 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
     margin-top: 20px;
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
 
   nav > ul > li {
@@ -793,12 +817,20 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
     padding-top: 60px;
   }
 
+  .left,
   .right {
+    border-top: 2px transparent;
+  }
+
+  /* Syntaxe pour plusieurs bouton sur le même hover */
+  .left:hover,
+  .right:hover {
     padding-bottom: 20px;
     border-bottom: solid 3px;
     margin-left: 0px;
     border-top: transparent;
     color: var(--color-03);
+    position: absolute;
   }
 
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
@@ -925,6 +957,15 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
     padding-right: 25px;
   }
 
+  .card-aside > section {
+    margin-left: 8px;
+    margin-right: 20px;
+  }
+
+  .card-aside > div {
+    width: 120%;
+  }
+
   h2 {
     /* Bloc titre : les plus populaires */
     margin-top: 30px;
@@ -934,27 +975,6 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
     flex-direction: column;
   }
 
-  article > div > div {
-    width: 100%;
-  }
-
-  .card-aside {
-    /* carte aside : les plus populaires */
-    width: 100%;
-    margin: 0px;
-  }
-
-  .card-aside > div {
-    margin-left: 10px;
-  }
-
-  .img-aside {
-    /* images : les plus populaires contrainte en largeur obligatoire
-    pour gérer ensembles les 2 img en paysage et la 3ème en portrait */
-    width: 70%;
-    height: 144px;
-  }
-
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
   /*        Main : Hébergement à Marseille Mobile         */
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
@@ -962,6 +982,14 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   #main-apartment {
     /* section : background hébergement à Marseille */
     background-color: var(--color-02);
+  }
+
+  #main-apartment > section > div {
+    /* section : background hébergement à Marseille */
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
   }
 
   .card-apartment {
