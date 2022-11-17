@@ -15,8 +15,6 @@ html {
   box-sizing: border-box; /* facilite et simplifie la gestion de la taille des éléments d'un navigateur à l'autre */
   max-width: 1440px; /* Largeur max du site */
   margin: auto; /* A pour effet de centrer le site dans la page du navigateur */
-  /* TEST */
-  /* border: solid 2px rgb(228, 232, 228); */
 }
 
 body {
@@ -423,7 +421,6 @@ i {
 
 #main-apartment {
   /* section : background hébergement à Marseille */
-
   width: 68%;
   /* Sur la largeur totale du site ce bloc prend : 70% */
 
@@ -458,7 +455,6 @@ i {
   /* Images des hébergements */
   width: 100%;
   height: 124px;
-
   object-fit: cover;
   /* Contour Blanc autour des images */
   border: 5px solid var(--color-02);
@@ -670,7 +666,7 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
   #main-apartment {
-    /* section : background h ébergement à Marseille */
+    /* section : background hébergement à Marseille */
     width: 100%;
   }
 
@@ -983,7 +979,7 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   }
 
   .img-apartment {
-    width: 100%;
+    /* Images des hébergements */
     object-position: 70% 70%;
   }
 
