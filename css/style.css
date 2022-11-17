@@ -583,29 +583,19 @@ article {
 .img-activity {
   /* Images des cartes */
   width: 100%;
-  height: 445px;
+  height: 389px;
   border-radius: 20px 20px 0px 0px;
   object-fit: cover;
 }
 
-.portrait-img {
-  /* Image Fort de Pomègues : personnalisée en hauteur */
-  height: 396px;
-}
-
-.card-activity > div {
-  /* div : qui contient le h3 */
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.card-activity > div > h3 {
-  /* Titre h3 des cartes : Activités à Marseille */
+.card-activity > section {
+  /* section : qui contient les h3 */
+  width: auto;
+  height: 100%;
   margin-left: 20px;
-  margin-top: 15px;
 }
 
-.card-activity > div > h3 > br {
+.card-activity > section > h3 > br {
   /* Empèche le retour à la ligne */
   display: none;
 }
@@ -723,9 +713,6 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
   /* ------ Main : Activités à Marseille Tablette ------- */
   /* :::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
-  /* TEST */
-  /* background-color: rgb(233, 230, 230); */
-
   #main-activity {
     display: flex;
     align-items: stretch;
@@ -734,7 +721,6 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
 
   .card-activity {
     /* carte : activités */
-    width: 100%;
     height: 267px;
   }
 
@@ -748,27 +734,16 @@ o o o o o o o o o o o  VERSION TABLETTE  o o o o o o o o o o
     margin-right: 50px;
   }
 
-  .portrait-img {
-    /*
-    image Fort de Pomègues :
-    contrainte en hauteur
-    images N°2 hauteur personnalisée
-    */
-    height: 212px;
+  .img-activity {
+    /* Images des cartes */
+    height: 211px;
+  }
+  .card-activity > section {
+    /* section : qui contient les h3 */
+    padding-right: 5px;
   }
 
-  .card-activity > div {
-    /* div : qui contient le h3 */
-    width: auto;
-    padding-right: 8px;
-  }
-
-  .card-activity > div > h3 {
-    /* Titre h3 des cartes : Activités à Marseille */
-    margin-top: 8px;
-  }
-
-  .card-activity > div > h3 > br {
+  .card-activity > section > h3 > br {
     /* Rétablie le retour à la ligne */
     display: inline;
   }
@@ -1049,10 +1024,8 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
 
   .card-activity {
     /* carte : activités */
-    width: 335px;
-    height: 190px;
+    height: 200px;
     margin-bottom: 25px;
-    width: 100%;
   }
 
   .mr {
@@ -1063,19 +1036,13 @@ o o o o o o o o o o o o  VERSION MOBILE  o o o o o o o o o o o
   .img-activity {
     /* Images des cartes */
     height: 134px;
-    width: 100%;
   }
 
-  .card-activity > div {
-    /* div : qui contient le h3 */
-    width: 302px;
-    margin-top: 10px;
-  }
-
-  .card-activity > div > h3 > br {
+  .card-activity > section > h3 > br {
     /* Empèche le retour à la ligne */
     display: none;
   }
+
   /*
   ------------------------------------------------------------
   o o o o o o o o o o o  VERSION MOBILE o o o o o o o o o o 
